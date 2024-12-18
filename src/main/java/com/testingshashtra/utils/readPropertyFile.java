@@ -18,4 +18,20 @@ public class readPropertyFile {
 	public static String getPassword() {
 		return PropUtils.loadFile(filepath, "password");
 	}
+	
+	public static String getInvalidUsername() {
+		return PropUtils.loadFile(filepath, "invalidUsername");
+	}
+	
+	public static String getInvalidPassword() {
+		return PropUtils.loadFile(filepath, "invalidPassword");
+	}
+	
+	public static String getErrorMessage() {
+		return PropUtils.loadFile(filepath, "errorMessage");
+	}
+	
+	public static String getErrorMessageForBlank() {
+		return PropUtils.loadFile(filepath, "blankErrorMessage");
+	}
 }

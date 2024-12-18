@@ -12,29 +12,27 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class VerifyUserEntersValidCredentials {
+	static String homepageUrl = "";
 	static String currentUrl = "";
-
-	@Given("Open browser and launch url of orange hrm")
-	public static void openBrowserAndLaunchUrl() {
-		Keywords.openBrowser(readPropertyFile.getBrowserName());
-		Keywords.launchUrl(readPropertyFile.getLaunchUrl("qa"));
-	}
 
 	@When("User enters valid username and password")
 	public static void enterUsernamePassword() {
 		LoginPage lp = new LoginPage();
-		lp.enterUsername();
-		lp.enterPassword();
+		lp.enterInvalidUsername();
+		lp.enterValidPassword();
 	}
 
 	@And("Click on Login button")
 	public static void clickOnLogin() {
 		LoginPage lp = new LoginPage();
-		currentUrl = lp.clickOnLogin();
+		homepageUrl = lp.clickOnLogin();
 	}
 
 	@Then("User should successfully Login to orangehrm")
 	public static void successfulLogin() {
-		Assert.assertEquals(true, currentUrl, "User logged in successfully");
+		LoginPage lp = new LoginPage();
+		currentUrl = lp.switchToHomePage();
+		Assert.assertEquals(homepageUrl, currentUrl, "Current Url and Home Page Url do not match");
 	}
+
 }

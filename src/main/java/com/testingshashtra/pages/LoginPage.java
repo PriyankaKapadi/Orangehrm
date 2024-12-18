@@ -9,11 +9,12 @@ import com.testingshashtra.utils.readPropertyFile;
 import com.testingshashtra.wait.WaitFor;
 
 public class LoginPage {
+
 	public LoginPage() {
 		PageFactory.initElements(Keywords.driver, this);
 	}
 
-	@FindBy(css = "form.oxd-form>div.oxd-form-row>div.oxd-input-group>div+div>input")
+	@FindBy(css = "input[name='username']")
 	private static WebElement username;
 
 	@FindBy(css = "input[name='password']")
@@ -22,12 +23,18 @@ public class LoginPage {
 	@FindBy(css = "button[type='submit']")
 	private static WebElement loginButton;
 
-	public static void enterUsername() {
+	@FindBy(css = "p.oxd-alert-content-text")
+	private static WebElement errorMessageInvalidCredential;
+
+	@FindBy(css="div.oxd-input-group__label-wrapper+div+span.oxd-input-group__message")
+	private static WebElement errorMessageRequired; 
+	
+	public static void enterValidUsername() {
 		WaitFor.visibilityOfElement(username);
 		Keywords.enterTextTo(username, readPropertyFile.getUsername());
 	}
 
-	public static void enterPassword() {
+	public static void enterValidPassword() {
 		WaitFor.visibilityOfElement(password);
 		Keywords.enterTextTo(password, readPropertyFile.getPassword());
 	}
@@ -37,4 +44,38 @@ public class LoginPage {
 		return Keywords.driver.getCurrentUrl();
 	}
 
+	public static String switchToHomePage() {
+		Keywords.switchToWindow();
+		return Keywords.driver.getCurrentUrl();
+	}
+
+	public static void enterInvalidUsername() {
+		WaitFor.visibilityOfElement(username);
+		Keywords.enterTextTo(username, readPropertyFile.getInvalidUsername());
+	}
+
+	public static void enterInvalidPassword() {
+		WaitFor.visibilityOfElement(password);
+		Keywords.enterTextTo(password, readPropertyFile.getInvalidPassword());
+	}
+
+	public static String getErrorMessage() {
+		WaitFor.visibilityOfElement(errorMessageInvalidCredential);
+		return Keywords.getMessage(errorMessageInvalidCredential);
+	}
+
+	public static void enterBlankUsername() {
+		WaitFor.visibilityOfElement(username);
+		Keywords.enterTextTo(username, "");
+	}
+
+	public static void enterBlankPassword() {
+		WaitFor.visibilityOfElement(password);
+		Keywords.enterTextTo(password, "");
+	}
+	
+	public static String getErrorMessageForBlankText() {
+		WaitFor.visibilityOfElement(errorMessageRequired);
+		return Keywords.getMessage(errorMessageRequired);
+	}
 }

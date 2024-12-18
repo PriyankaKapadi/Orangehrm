@@ -1,10 +1,14 @@
 package com.testingshashtra.base;
 
+import java.util.List;
+import java.util.Set;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import com.testingshashtra.exception.InvalidBrowserException;
 
@@ -38,5 +42,25 @@ public abstract class Keywords {
 
 	public static void clickOnWebElement(WebElement element) {
 		element.click();
+	}
+
+	public static void switchToWindow() {
+		String parentWindow = driver.getWindowHandle();
+		Set<String> allWindowHandles = driver.getWindowHandles();
+		for (String handle : allWindowHandles) {
+			if (!handle.equalsIgnoreCase(parentWindow)) {
+				driver.switchTo().window(handle);
+				break;
+			}
+		}
+	}
+
+	public static String getMessage(WebElement element) {
+		String message = element.getText();
+		return message;
+	}
+
+	public static boolean elementIsDisplayed(WebElement element) {
+		return element.isDisplayed();
 	}
 }
