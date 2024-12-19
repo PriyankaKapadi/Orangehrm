@@ -32,6 +32,14 @@ public class readPropertyFile {
 	}
 	
 	public static String getErrorMessageForBlank() {
-		return PropUtils.loadFile(filepath, "blankErrorMessage");
+		return PropUtils.loadFile(filepath, "errorMessage");
+	}
+	
+	public static String getNewPassword() {
+		return PropUtils.loadFile(filepath, "validNewPassword");
+	}
+	
+	public static String getConfirmPassword() {
+		return PropUtils.loadFile(filepath, "validConfirmPassword");
 	}
 }

@@ -37,7 +37,6 @@ public abstract class Keywords {
 
 	public static void enterTextTo(WebElement element, String text) {
 		element.sendKeys(text);
-		System.out.println(text);
 	}
 
 	public static void clickOnWebElement(WebElement element) {
@@ -62,5 +61,13 @@ public abstract class Keywords {
 
 	public static boolean elementIsDisplayed(WebElement element) {
 		return element.isDisplayed();
+	}
+	
+	public static String getUrlPage() {
+		return driver.getCurrentUrl();
+	}
+	
+	public static String getTextFrom(WebElement element) {
+		return element.getText();
 	}
 }

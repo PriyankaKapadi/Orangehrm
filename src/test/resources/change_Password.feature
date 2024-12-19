@@ -5,6 +5,6 @@ Scenario: To verify when user enters valid password details then it should updat
 When User login successfully
 And User clicks on profile dropdown list
 And Select change password options
-#And Enter valid Current Password,Password and Confirm Password
-#And Click on Save Button
+And Enter valid Current Password,Password and Confirm Password
+And Click on Save Button
 #Then It should update password successfully

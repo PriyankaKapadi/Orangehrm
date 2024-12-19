@@ -28,6 +28,6 @@ public class verifyUserEntersBlankUsernameAndPassword {
 		LoginPage lp= new LoginPage();
 		String actual_error_msg=lp.getErrorMessageForBlankText();
 		String exp_error_msg="Required";
-		Assert.assertEquals(actual_error_msg, exp_error_msg,"Actual error message doesn't match with expected error message");
+		Assert.assertEquals(actual_error_msg, exp_error_msg,"Application shows error message as 'Required' instead it should show error message as 'Please enter valid credentials'");
 	}
 }

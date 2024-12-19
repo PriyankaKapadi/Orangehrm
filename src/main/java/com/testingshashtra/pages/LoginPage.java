@@ -41,12 +41,12 @@ public class LoginPage {
 
 	public static String clickOnLogin() {
 		Keywords.clickOnWebElement(loginButton);
-		return Keywords.driver.getCurrentUrl();
+		return Keywords.getUrlPage();
 	}
 
 	public static String switchToHomePage() {
 		Keywords.switchToWindow();
-		return Keywords.driver.getCurrentUrl();
+		return Keywords.getUrlPage();
 	}
 
 	public static void enterInvalidUsername() {

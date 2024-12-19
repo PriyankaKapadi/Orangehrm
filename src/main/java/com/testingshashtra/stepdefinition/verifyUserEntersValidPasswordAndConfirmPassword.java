@@ -2,10 +2,13 @@ package com.testingshashtra.stepdefinition;
 
 import org.testng.Assert;
 
+import com.testingshashtra.base.Keywords;
 import com.testingshashtra.pages.HomePage;
 import com.testingshashtra.pages.LoginPage;
+import com.testingshashtra.pages.UpdatePasswordPage;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class verifyUserEntersValidPasswordAndConfirmPassword {
@@ -31,6 +34,23 @@ public class verifyUserEntersValidPasswordAndConfirmPassword {
 		HomePage hp=new HomePage();
 		hp.selectOptionFromList();
 	}
-
-
+	
+	@And("Enter valid Current Password,Password and Confirm Password")
+	public static void enterValidPasswords() {
+		UpdatePasswordPage up=new UpdatePasswordPage();
+		up.enterCurrentPassword();
+		up.enterNewPassword();
+		up.enterConfirmPassword();
+	}
+	
+	@And("Click on Save Button")
+	public static void clickOnSaveButton() {
+		UpdatePasswordPage up=new UpdatePasswordPage();
+		up.clickOnSaveButton();
+	}
+	
+	/*@Then("It should update password successfully")
+	public static void updatePasswordSuccessfully() {
+		
+	}*/
 }
