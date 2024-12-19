@@ -26,7 +26,7 @@ public class verifyUserEntersBlankUsernameAndPassword {
 	@Then("Application should show error message 'Invalid credentials'")
 	public static void showErrorMessage() {
 		LoginPage lp= new LoginPage();
-		String actual_error_msg=lp.getErrorMessageForBlankText();
+		String actual_error_msg=lp.getErrorMessage();
 		String exp_error_msg="Required";
 		Assert.assertEquals(actual_error_msg, exp_error_msg,"Application shows error message as 'Required' instead it should show error message as 'Please enter valid credentials'");
 	}

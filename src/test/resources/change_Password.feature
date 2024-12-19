@@ -7,4 +7,4 @@ And User clicks on profile dropdown list
 And Select change password options
 And Enter valid Current Password,Password and Confirm Password
 And Click on Save Button
-#Then It should update password successfully
+Then It should update password successfully
