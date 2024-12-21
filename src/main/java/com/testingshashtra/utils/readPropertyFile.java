@@ -31,8 +31,8 @@ public class readPropertyFile {
 		return PropUtils.loadFile(filepath, "errorMessage");
 	}
 	
-	public static String getErrorMessageForBlank() {
-		return PropUtils.loadFile(filepath, "errorMessage");
+	public static String getSuccessMessageForSave() {
+		return PropUtils.loadFile(filepath, "successMessage");
 	}
 	
 	public static String getNewPassword() {

@@ -58,7 +58,8 @@ public class UpdatePasswordPage {
 		Keywords.clickOnWebElement(saveButton);
 	}
 
-	public static void getSuccessMessage() {
-		Keywords.getMessage(successMessage);
+	public static String getSuccessMessage() {
+		WaitFor.visibilityOfElement(successMessage);
+		return Keywords.getMessage(successMessage);
 	}
 }
