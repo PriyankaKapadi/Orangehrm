@@ -2,6 +2,7 @@ package com.testingshashtra.utils;
 
 public class readPropertyFile {
 	static String filepath = System.getProperty("user.dir") + "\\src\\test\\resources\\app.properties";
+	static String fpathError=System.getProperty("user.dir")+"\\src\\test\\resources\\err.properties";
 
 	public static String getBrowserName() {
 		return PropUtils.loadFile(filepath, "Browser_name");
@@ -19,20 +20,12 @@ public class readPropertyFile {
 		return PropUtils.loadFile(filepath, "password");
 	}
 	
-	public static String getInvalidUsername() {
-		return PropUtils.loadFile(filepath, "invalidUsername");
-	}
-	
-	public static String getInvalidPassword() {
-		return PropUtils.loadFile(filepath, "invalidPassword");
-	}
-	
 	public static String getErrorMessage() {
-		return PropUtils.loadFile(filepath, "errorMessage");
+		return PropUtils.loadFile(fpathError, "errorMessage");
 	}
 	
 	public static String getSuccessMessageForSave() {
-		return PropUtils.loadFile(filepath, "successMessage");
+		return PropUtils.loadFile(fpathError, "successMessage");
 	}
 	
 	public static String getNewPassword() {
