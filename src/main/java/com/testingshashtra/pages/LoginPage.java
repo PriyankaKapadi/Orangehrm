@@ -22,7 +22,7 @@ public class LoginPage {
 
 	@FindBy(css = "button[type='submit']")
 	private static WebElement loginButton;
-
+	
 	@FindBy(css = "p.oxd-alert-content-text")
 	private static WebElement errorMessageInvalidCredential;
 
