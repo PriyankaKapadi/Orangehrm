@@ -26,54 +26,34 @@ public class LoginPage {
 	@FindBy(css = "p.oxd-alert-content-text")
 	private static WebElement errorMessageInvalidCredential;
 
-	@FindBy(css="div.oxd-input-group__label-wrapper+div+span.oxd-input-group__message")
-	private static WebElement errorMessageRequired; 
-	
-	public static void enterValidUsername() {
+	@FindBy(css = "div.oxd-input-group__label-wrapper+div+span.oxd-input-group__message")
+	private static WebElement errorMessageRequired;
+
+	public void enterUsername(String usernm) {
 		WaitFor.visibilityOfElement(username);
-		Keywords.enterTextTo(username, readPropertyFile.getUsername());
+		Keywords.enterTextTo(username,usernm);
 	}
 
-	public static void enterValidPassword() {
+	public void enterPassword(String pwd) {
 		WaitFor.visibilityOfElement(password);
-		Keywords.enterTextTo(password, readPropertyFile.getPassword());
+		Keywords.enterTextTo(password, pwd);
 	}
 
-	public static String clickOnLogin() {
+	public String clickOnLogin() {
 		Keywords.clickOnWebElement(loginButton);
 		return Keywords.getUrlPage();
 	}
 
-	public static String switchToHomePage() {
+	public String switchToHomePage() {
 		Keywords.switchToWindow();
 		return Keywords.getUrlPage();
 	}
-
-	public static void enterInvalidUsername() {
-		WaitFor.visibilityOfElement(username);
-		Keywords.enterTextTo(username, readPropertyFile.getInvalidUsername());
-	}
-
-	public static void enterInvalidPassword() {
-		WaitFor.visibilityOfElement(password);
-		Keywords.enterTextTo(password, readPropertyFile.getInvalidPassword());
-	}
-
-	public static String getErrorMessage() {
+	
+	public String getErrorMessage() {
 		WaitFor.visibilityOfElement(errorMessageInvalidCredential);
 		return Keywords.getMessage(errorMessageInvalidCredential);
 	}
 
-	public static void enterBlankUsername() {
-		WaitFor.visibilityOfElement(username);
-		Keywords.enterTextTo(username, "");
-	}
-
-	public static void enterBlankPassword() {
-		WaitFor.visibilityOfElement(password);
-		Keywords.enterTextTo(password, "");
-	}
-	
 	public static String getErrorMessageForBlankText() {
 		WaitFor.visibilityOfElement(errorMessageRequired);
 		return Keywords.getMessage(errorMessageRequired);
