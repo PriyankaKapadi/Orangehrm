@@ -31,4 +31,8 @@ public class readPropertyFile {
 	public static String getErrorMessageForCurrentPassword() {
 		return PropUtils.loadFile(fpathError, "CurrentPasswordErrorMessage");
 	}
+	
+	public static String getErrorMessageUsername() {
+		return PropUtils.loadFile(fpathError, "errorMessageUsername");
+	}
 }
