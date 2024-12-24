@@ -57,10 +57,19 @@ Scenario: To verify when user enters current password as combination of numbers 
 	And User enters Current Password as numbers & special characters.
 	And User enter Password,Confirm Password,click Save
 	Then It should display error msg 'Current Password is Incorrect'.
-@today	
+	
 Scenario: To verify when user enters current password as combination of numbers & special characters then it should update password successfully.
 	
 	When User login & click Dropdown.
 	And User enters Current Password as numbers & characters.
 	And User enter Password,Confirm Password,click on save.
 	Then It should show error msg as 'Current Password is Incorrect'.
+@today
+Scenario: To verify when user enters current password less than 7 characters then it should update password successfully.
+	
+	When User login successfully,click Dropdown.
+	And User enters Current Password less than 7 characters.
+	And User enter Password,Confirm Password,click on Save.
+	Then It should show message as 'Current Password is Incorrect'.
+
+	
