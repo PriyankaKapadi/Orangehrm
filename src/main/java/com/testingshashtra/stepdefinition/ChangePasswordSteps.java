@@ -315,4 +315,37 @@ public class ChangePasswordSteps {
 		Assert.assertEquals(actualMsg, readPropertyFile.getErrorMessageForCurrentPassword(),
 				"Application should show error message as 'Current Password is Incorrect'");
 	}
+	
+	@When("User login successfully,click Dropdown.")
+	public static void loginSuccessClickDropDown() {
+		LoginPage lp = new LoginPage();
+		lp.enterUsername("Admin");
+		lp.enterPassword("admin123");
+		lp.clickOnLogin();
+		HomePage hp = new HomePage();
+		hp.clickDropDownMenu();
+		hp.selectOptionFromList();
+	}
+
+	@And("User enters Current Password less than 7 characters.")
+	public static void enterPasswordlessThanSevenChar() {
+		UpdatePasswordPage up = new UpdatePasswordPage();
+		up.enterCurrentPassword("sasa1");
+	}
+
+	@And("User enter Password,Confirm Password,click on Save.")
+	public static void enterPasswordAndSave() {
+		UpdatePasswordPage up = new UpdatePasswordPage();
+		up.enterNewPassword("priyanka12");
+		up.enterConfirmPassword("priyanka12");
+		up.clickOnSaveButton();
+	}
+
+	@Then("It should show message as 'Current Password is Incorrect'.")
+	public static void getErrorMsgForCurrentPasswordForLessSevenChar() {
+		UpdatePasswordPage up = new UpdatePasswordPage();
+		String actualMsg = up.getErrorMsgForInavalidCurrentPassword();
+		Assert.assertEquals(actualMsg, readPropertyFile.getErrorMessageForCurrentPassword(),
+				"Application should show error message as 'Current Password is Incorrect'");
+	}
 }
