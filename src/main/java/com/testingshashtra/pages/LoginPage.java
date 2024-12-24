@@ -3,7 +3,6 @@ package com.testingshashtra.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.testingshashtra.base.Keywords;
 import com.testingshashtra.utils.readPropertyFile;
 import com.testingshashtra.wait.WaitFor;
@@ -31,7 +30,7 @@ public class LoginPage {
 
 	public void enterUsername(String usernm) {
 		WaitFor.visibilityOfElement(username);
-		Keywords.enterTextTo(username,usernm);
+		Keywords.enterTextTo(username, usernm);
 	}
 
 	public void enterPassword(String pwd) {
@@ -48,13 +47,13 @@ public class LoginPage {
 		Keywords.switchToWindow();
 		return Keywords.getUrlPage();
 	}
-	
+
 	public String getErrorMessage() {
 		WaitFor.visibilityOfElement(errorMessageInvalidCredential);
 		return Keywords.getMessage(errorMessageInvalidCredential);
 	}
 
-	public static String getErrorMessageForBlankText() {
+	public String getErrorMessageForBlankText() {
 		WaitFor.visibilityOfElement(errorMessageRequired);
 		return Keywords.getMessage(errorMessageRequired);
 	}
