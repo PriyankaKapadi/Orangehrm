@@ -31,27 +31,26 @@ public class UpdatePasswordPage {
 
 	@FindBy(css = "div.oxd-toast-content--success>p.oxd-text--toast-message")
 	private static WebElement successMessage;
+	
+	@FindBy(css = "span.oxd-input-field-error-message")
+	private static WebElement errorMessageBlankCurrentPass;
+	
+	@FindBy(css = "div.oxd-toast-container--bottom>div.oxd-toast--error>div>div+div.oxd-toast-content--error>p+p.oxd-toast-content-text")
+	private static WebElement errorMsgNumberCP;
 
-	public void enterCurrentPassword() {
+	public void enterCurrentPassword(String currPwd) {
 		WaitFor.visibilityOfElement(currentPassword);
-		Keywords.enterTextTo(currentPassword, readPropertyFile.getPassword());
+		Keywords.enterTextTo(currentPassword, currPwd);
 	}
 
-	public void enterNewPassword() {
+	public void enterNewPassword(String newPwd) {
 		WaitFor.visibilityOfElement(password);
-		Keywords.enterTextTo(password, readPropertyFile.getNewPassword());
+		Keywords.enterTextTo(password, newPwd);
 	}
 
-	/*
-	 * public static void enterNewPassword(String enterPassword) {
-	 * WaitFor.visibilityOfElement(password); if
-	 * (enterPassword.equals(readPropertyFile.getPassword())) {
-	 * Keywords.enterTextTo(password, enterPassword); } }
-	 */
-
-	public void enterConfirmPassword() {
+	public void enterConfirmPassword(String confirmPwd) {
 		WaitFor.visibilityOfElement(confirmPassword);
-		Keywords.enterTextTo(confirmPassword, readPropertyFile.getConfirmPassword());
+		Keywords.enterTextTo(confirmPassword, confirmPwd);
 	}
 
 	public void clickOnSaveButton() {
@@ -61,5 +60,15 @@ public class UpdatePasswordPage {
 	public String getSuccessMessage() {
 		WaitFor.visibilityOfElement(successMessage);
 		return Keywords.getMessage(successMessage);
+	}
+	
+	public String getErrorMsgBlankPassword() {
+		WaitFor.visibilityOfElement(errorMessageBlankCurrentPass);
+		return Keywords.getMessage(errorMessageBlankCurrentPass);
+	}
+	
+	public String getErrorMsgForInavalidCurrentPassword() {
+		WaitFor.visibilityOfElement(errorMsgNumberCP);
+		return Keywords.getMessage(errorMsgNumberCP);
 	}
 }
