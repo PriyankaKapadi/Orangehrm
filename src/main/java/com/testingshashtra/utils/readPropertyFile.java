@@ -35,4 +35,8 @@ public class readPropertyFile {
 	public static String getConfirmPassword() {
 		return PropUtils.loadFile(filepath, "validConfirmPassword");
 	}
+	
+	public static String getErrorMessageUsername() {
+		return PropUtils.loadFile(fpathError, "errorMessageUsername");
+	}
 }

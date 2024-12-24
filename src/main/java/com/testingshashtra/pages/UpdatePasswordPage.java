@@ -32,12 +32,12 @@ public class UpdatePasswordPage {
 	@FindBy(css = "div.oxd-toast-content--success>p.oxd-text--toast-message")
 	private static WebElement successMessage;
 
-	public static void enterCurrentPassword() {
+	public void enterCurrentPassword() {
 		WaitFor.visibilityOfElement(currentPassword);
 		Keywords.enterTextTo(currentPassword, readPropertyFile.getPassword());
 	}
 
-	public static void enterNewPassword() {
+	public void enterNewPassword() {
 		WaitFor.visibilityOfElement(password);
 		Keywords.enterTextTo(password, readPropertyFile.getNewPassword());
 	}
@@ -49,16 +49,16 @@ public class UpdatePasswordPage {
 	 * Keywords.enterTextTo(password, enterPassword); } }
 	 */
 
-	public static void enterConfirmPassword() {
+	public void enterConfirmPassword() {
 		WaitFor.visibilityOfElement(confirmPassword);
 		Keywords.enterTextTo(confirmPassword, readPropertyFile.getConfirmPassword());
 	}
 
-	public static void clickOnSaveButton() {
+	public void clickOnSaveButton() {
 		Keywords.clickOnWebElement(saveButton);
 	}
 
-	public static String getSuccessMessage() {
+	public String getSuccessMessage() {
 		WaitFor.visibilityOfElement(successMessage);
 		return Keywords.getMessage(successMessage);
 	}

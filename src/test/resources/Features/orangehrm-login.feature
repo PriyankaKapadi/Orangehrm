@@ -18,7 +18,6 @@ Scenario: To verify when user enters valid username and invalid password
 	And Click on Login Button for invalid credentials
 	Then Application should show an error message as 'Invalid credentials'
 
-@today
 Scenario: To verify when user enters blank username and password
 
 	When User enters blank username and password

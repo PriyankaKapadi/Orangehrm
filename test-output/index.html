@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\hp\AppData\Local\Temp\testng-eclipse--1430547695\testng-customsuite.xml</span>
+                    <span>C:\Users\rupes\AppData\Local\Temp\testng-eclipse-206023078\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.testingshashtra.runner.FeatureRunner" class="method navigator-link" hash-for-method="runScenario(&quot;To verify when user enters blank username and password&quot;, &quot;This feature file includes all test cases...)">runScenario("To verify when user enters blank username and password", "This feature file includes all test cases...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.testingshashtra.runner.FeatureRunner" class="method navigator-link" hash-for-method="runScenario(&quot;To verify when user enters blank username&quot;, &quot;This feature file includes all the testcases related t...)">runScenario("To verify when user enters blank username", "This feature file includes all the testcases related t...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -126,42 +126,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;To verify when user enters blank username and password&quot;, &quot;This feature file includes all test cases...)">
-                  </a> <!-- runScenario("To verify when user enters blank username and password", "This feature file includes all test cases...) -->
+                  <a name="runScenario(&quot;To verify when user enters blank username&quot;, &quot;This feature file includes all the testcases related t...)">
+                  </a> <!-- runScenario("To verify when user enters blank username", "This feature file includes all the testcases related t...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("To verify when user enters blank username and password","This feature file includes all test cases related to Login Page of Orangehrm")</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Failed to decode response from marionette
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [e6cb75ab-d715-4c76-9eb3-d8cc5a464e95, findElement {using=css selector, value=p.oxd-alert-content-text}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:debuggerAddress: 127.0.0.1:8490, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 9704, moz:profile: C:\Users\hp\AppData\Local\T..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:8490/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: e6cb75ab-d715-4c76-9eb3-d8cc5a464e95
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy24.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at com.testingshashtra.wait.WaitFor.visibilityOfElement(WaitFor.java:23)
-	at com.testingshashtra.pages.LoginPage.getErrorMessage(LoginPage.java:89)
-	at com.testingshashtra.stepdefinition.UserLoginSteps.showErrorMessage(UserLoginSteps.java:52)
-	at ✽.Application should show error message &apos;Invalid credentials&apos;(file:///E:/Workspace/Orangehrm/src/test/resources/Features/orangehrm-login.feature:26)
+                  <span class="parameters">("To verify when user enters blank username","This feature file includes all the testcases related to forgot password of orangeHRM")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Application should show error message as &apos;Please enter valid username&apos; expected [Please enter valid Username] but found [Required]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.testingshashtra.stepdefinition.ForgotPasswordSteps.verifyErrorMessage(ForgotPasswordSteps.java:51)
+	at ✽.It should show message as &apos;Please enter valid username&apos;(file:///E:/TestingShastra/Workspace/OrangeHRM/src/test/resources/Features/forgot_Password.feature:13)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -173,7 +149,7 @@ Session ID: e6cb75ab-d715-4c76-9eb3-d8cc5a464e95
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\hp\AppData\Local\Temp\testng-eclipse--1430547695\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\rupes\AppData\Local\Temp\testng-eclipse-206023078\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -234,12 +210,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.testingshashtra.runner.FeatureRunner')
-data.setCell(0, 3, 21482);
+data.setCell(0, 3, 12658);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 21 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -267,18 +243,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.testingshashtra.runner.FeatureRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@ae202c6)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@5e65afb6)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("To verify when user enters blank username and password", "This feature file includes all test cases...)</span>
-                <span class="method-start">833 ms</span>
+                <span class="method-name">runScenario("To verify when user enters blank username", "This feature file includes all the testcases related t...)</span>
+                <span class="method-start">756 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">22331 ms</span>
+                <span class="method-start">13423 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

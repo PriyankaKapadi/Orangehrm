@@ -29,9 +29,15 @@ public class LoginPage {
 	@FindBy(css = "div.oxd-input-group__label-wrapper+div+span.oxd-input-group__message")
 	private static WebElement errorMessageRequired;
 
+	@FindBy(css = "div.orangehrm-login-forgot>p")
+	private static WebElement forgotPassword;
+
+	@FindBy(css = "button.orangehrm-forgot-password-button--reset")
+	private static WebElement resetPasswordButton;
+
 	public void enterUsername(String usernm) {
 		WaitFor.visibilityOfElement(username);
-		Keywords.enterTextTo(username,usernm);
+		Keywords.enterTextTo(username, usernm);
 	}
 
 	public void enterPassword(String pwd) {
@@ -48,14 +54,19 @@ public class LoginPage {
 		Keywords.switchToWindow();
 		return Keywords.getUrlPage();
 	}
-	
+
 	public String getErrorMessage() {
 		WaitFor.visibilityOfElement(errorMessageInvalidCredential);
 		return Keywords.getMessage(errorMessageInvalidCredential);
 	}
 
-	public static String getErrorMessageForBlankText() {
+	public String getErrorMessageForBlankText() {
 		WaitFor.visibilityOfElement(errorMessageRequired);
 		return Keywords.getMessage(errorMessageRequired);
+	}
+
+	public void clickOnForgotPasswordLink() {
+		WaitFor.visibilityOfElement(forgotPassword);
+		Keywords.clickOnWebElement(forgotPassword);
 	}
 }
