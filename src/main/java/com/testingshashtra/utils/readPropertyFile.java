@@ -20,6 +20,14 @@ public class readPropertyFile {
 		return PropUtils.loadFile(filepath, "password");
 	}
 	
+	public static String getNewPassword() {
+		return PropUtils.loadFile(filepath, "validNewPassword");
+	}
+	
+	public static String getConfirmPassword() {
+		return PropUtils.loadFile(filepath, "validConfirmPassword");
+	}
+	
 	public static String getErrorMessage() {
 		return PropUtils.loadFile(fpathError, "errorMessage");
 	}
@@ -28,11 +36,8 @@ public class readPropertyFile {
 		return PropUtils.loadFile(fpathError, "successMessage");
 	}
 	
-	public static String getNewPassword() {
-		return PropUtils.loadFile(filepath, "validNewPassword");
+	public static String getErrorMessageForCurrentPassword() {
+		return PropUtils.loadFile(fpathError, "CurrentPasswordErrorMessage");
 	}
 	
-	public static String getConfirmPassword() {
-		return PropUtils.loadFile(filepath, "validConfirmPassword");
-	}
 }

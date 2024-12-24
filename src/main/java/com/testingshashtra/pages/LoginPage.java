@@ -54,7 +54,7 @@ public class LoginPage {
 		return Keywords.getMessage(errorMessageInvalidCredential);
 	}
 
-	public static String getErrorMessageForBlankText() {
+	public String getErrorMessageForBlankText() {
 		WaitFor.visibilityOfElement(errorMessageRequired);
 		return Keywords.getMessage(errorMessageRequired);
 	}

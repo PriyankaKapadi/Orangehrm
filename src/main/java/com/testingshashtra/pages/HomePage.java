@@ -28,26 +28,26 @@ public class HomePage {
 	@FindBy(css = "input[name='username']")
 	private static WebElement checkForUsername;
 
-	public static void clickDropDownMenu() {
+	public void clickDropDownMenu() {
 		WaitFor.visibilityOfElement(dropDownMenu);
 		Keywords.clickOnWebElement(dropDownMenu);
 	}
 
-	public static void selectOptionFromList() {
+	public void selectOptionFromList() {
 		WaitFor.visibilityOfElement(changePassword);
 		Keywords.clickOnWebElement(changePassword);
 	}
 
-	public static boolean checkForWebElementPresence() {
+	public boolean checkForWebElementPresence() {
 		WaitFor.visibilityOfElement(checkForWebElement);
 		return Keywords.elementIsDisplayed(checkForWebElement);
 	}
 
-	public static void clickLogoutButton() {
+	public void clickLogoutButton() {
 		Keywords.clickOnWebElement(logoutButton);
 	}
 	
-	public static boolean checkForPresenceOfUsername() {
+	public boolean checkForPresenceOfUsername() {
 		WaitFor.visibilityOfElement(checkForUsername);
 		return Keywords.elementIsDisplayed(checkForUsername);
 	}
