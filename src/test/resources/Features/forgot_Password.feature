@@ -4,7 +4,7 @@ Scenario: To verify when user click on forgot password button then user should r
 
 		When User click on forgot password link 
 		Then It should successfully redirected to reset password page of orangeHRM
-@today	
+	
 Scenario: To verify when user enters blank username 
 
 		When User click on Forgot password link 
