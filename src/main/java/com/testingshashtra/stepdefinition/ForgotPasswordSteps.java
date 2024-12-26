@@ -50,5 +50,31 @@ public class ForgotPasswordSteps {
 		String expected=readPropertyFile.getErrorMessageUsername();
 		Assert.assertEquals(actual, expected,"Application should show error message as 'Please enter valid username'");
 	}
-
+	
+	@When("User click on Forgot password link of orangeHRM")
+	public static void userClickOnForgotPasswordOnOrange() {
+		LoginPage lp = new LoginPage();
+		lp.clickOnForgotPasswordLink();
+	}
+	
+	@And("Enter valid username")
+	public static void enterValidUserName() {
+		ResetPasswordPage rp = new ResetPasswordPage();
+		rp.enterUsername("Admin");
+	}
+	
+	@And("click on Reset Password button on Reset password page")
+	public static void clickOnResetButton() {
+		ResetPasswordPage rp = new ResetPasswordPage();
+		rp.clickOnResetPasswordButton();
+	}
+	
+	@Then("Reset Password link sent successfully'")
+	public static void verifyResetPasswordLinkSentMessage() {
+		ResetPasswordPage rp=new ResetPasswordPage();
+		String actualMsg=rp.getLinkSentMessage();
+		String expectedMsg=readPropertyFile.getsuccessMsgResetLinkSent();
+		Assert.assertEquals(actualMsg, expectedMsg,"Reset Password link sent successfully");
+	}
+	
 }
