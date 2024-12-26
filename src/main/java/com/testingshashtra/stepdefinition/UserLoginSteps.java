@@ -47,8 +47,7 @@ public class UserLoginSteps {
 	public void showErrorMessage() {
 		LoginPage lp = new LoginPage();
 		String actual_error_msg = lp.getErrorMessageForBlankText();
-		String exp_error_msg = "Required";
-		Assert.assertEquals(actual_error_msg, exp_error_msg,
+		Assert.assertEquals(actual_error_msg, readPropertyFile.getErrorMessage(),
 				"Application shows error message as 'Required' instead it should show error message as 'Please enter valid credentials'");
 	}
 
@@ -156,153 +155,13 @@ public class UserLoginSteps {
 		LoginPage lp = new LoginPage();
 		String err_msg = lp.getErrorMessageForBlankText();
 		Assert.assertEquals(err_msg, readPropertyFile.getErrorMessage(),
-				"Application display  an error message as 'Invalid Credentials' instead it should show error message as 'Please enter valid Creadentials'");
-	}
-
-	@When("User enters blank username")
-	public void enterBlankUsername() {
-		LoginPage lp = new LoginPage();
-		lp.enterUsername("");
-	}
-
-	@And("Click on Login for invalid credential")
-	public void clickLogin() {
-		LoginPage lp = new LoginPage();
-		lp.clickOnLogin();
-
-	}
-
-	@Then("Application should show Error message 'Invalid credential'")
-	public void chkErrorMessage() {
-		LoginPage lp = new LoginPage();
-		String err_msg = lp.getErrorMessageForBlankText();
-		Assert.assertEquals(err_msg, readPropertyFile.getErrorMessage(),
-				"Application should show Error message 'Invalid credential'");
-	}
-
-	@When("User enters username as space")
-	public void enterUsernameSpace() {
-		LoginPage lp = new LoginPage();
-		lp.enterUsername(" ");
-	}
-
-	@And("Click on login for invalid credential")
-	public void clickLoginInvalidCred() {
-		LoginPage lp = new LoginPage();
-		lp.clickOnLogin();
-	}
-
-	@Then("Application should show error Message 'Invalid credential'")
-	public void chkErrMessage() {
-		LoginPage lp = new LoginPage();
-		String err_msg = lp.getErrorMessageForBlankText();
-		Assert.assertEquals(err_msg, readPropertyFile.getErrorMessage(),
-				"Application should show error Message 'Invalid credential'");
-	}
-
-	@When("User enters username as number")
-	public void enterUsernameNumber() {
-		LoginPage lp = new LoginPage();
-		lp.enterUsername("12345678");
+				"Application display an error message as 'Required' instead it should show error message as 'Please enter valid Creadentials'");
 	}
 	
-	@And("Click On login for invalid credentials")
-	public void clickOnLoginInvalidcredential() {
-		LoginPage lp = new LoginPage();
-		lp.clickOnLogin();
-	}
-	@Then("Application should display error Message 'Invalid credential'")
-	public void checkErrorMsgInvalidCred() {
-		LoginPage lp = new LoginPage();
-		String err_msg = lp.getErrorMessageForBlankText();
-		Assert.assertEquals(err_msg, readPropertyFile.getErrorMessage(),
-				"Application should display error Message 'Invalid credential'");
-		
-	}
-	
-	@When("User enters username as alphanumeric")
-	public void enterUsernameAlphaNumeric() {
-		LoginPage lp = new LoginPage();
-		lp.enterUsername("Abdh1234");
-	}
-
-	@And("Click on login for Invalid credential")
-	public void clickLoginInvalidcred() {
-		LoginPage lp = new LoginPage();
-		lp.clickOnLogin();
-	}
-
-	@Then("Application should show Error Message 'Invalid credential'")
-	public void checkErrorMessage() {
-		LoginPage lp = new LoginPage();
-		String err_msg = lp.getErrorMessageForBlankText();
-		Assert.assertEquals(err_msg, readPropertyFile.getErrorMessage(),
-				"Application should show Error Message 'Invalid credential'");
-	}
-
-	@When("User enters username as special character")
-	public void enterUsernameSpecialchar() {
-		LoginPage lp = new LoginPage();
-		lp.enterUsername("@^%$");
-	}
-
-	@And("Click on login for invalid Credential")
-	public void clickLoginButtonInvalidCred() {
-		LoginPage lp = new LoginPage();
-		lp.clickOnLogin();
-	}
-
-	@Then("Application should show error message 'Invalid credential'")
-	public void checkErrormsg() {
-		LoginPage lp = new LoginPage();
-		String err_msg = lp.getErrorMessageForBlankText();
-		Assert.assertEquals(err_msg, readPropertyFile.getErrorMessage(),
-				"Application should show error message 'Invalid credential'");
-	}
-
-	@When("User enters blank password")
-	public void enterBlankPassword() {
-		LoginPage lp = new LoginPage();
-		lp.enterPassword("");
-	}
-
-	@And("Click on login for invalid credentials")
-	public void clickLoginInvalidCredential() {
-		LoginPage lp = new LoginPage();
-		lp.clickOnLogin();
-	}
-
-	@Then("Application should show Error message 'Invalid credentials'")
-	public void checkErrMessage() {
-		LoginPage lp = new LoginPage();
-		String err_msg = lp.getErrorMessageForBlankText();
-		Assert.assertEquals(err_msg, readPropertyFile.getErrorMessage(),
-				"Application should show error message 'Invalid credential'");
-	}
-	
-	@When("User enters password as space")
-	public void enterPasswordAsSpace() {
-		LoginPage lp = new LoginPage();
-		lp.enterPassword("     ");
-	}
-	
-	@And("Click on login button For invalid Credential")
-	public void clickLoginforInvalidcred() {
-		LoginPage lp = new LoginPage();
-		lp.clickOnLogin();
-	}
-	
-	@Then("Application should show Error Message as 'Invalid credential'")
-	public void checkErrorMessageInvalidcred() {
-		LoginPage lp = new LoginPage();
-		String err_msg = lp.getErrorMessageForBlankText();
-		Assert.assertEquals(err_msg, readPropertyFile.getErrorMessage(),
-				"Application should show Error Message as 'Invalid credential'");
-	}
-	
-	@When("User enters password as less than 8 character")
+	@When("User enters valid username and password as less than 7 character")
 	public void enterPswLessThanEightChar() {
 		LoginPage lp = new LoginPage();
+		lp.enterUsername("Admin");
 		lp.enterPassword("Yogita");
 	}
 	
@@ -312,18 +171,19 @@ public class UserLoginSteps {
 		lp.clickOnLogin();
 		}
 	
-	@Then("Application should show Error Message as 'Password must contain at least 8 characters'")
+	@Then("Application should show Error Message as 'Password must contain at least 7 characters'")
 	public void checkErrorMsgPwdLessThanEight() {
 		LoginPage lp = new LoginPage();
-		String err_msg=lp.getErrorMessageForPassword();
-		Assert.assertEquals(err_msg, readPropertyFile.getErrorMessagePasswordLessThanEight(),
-				"Application should show Error Message as 'Password must contain at least 8 characters'");
+		String err_msg=lp.getErrorMessage();
+		Assert.assertEquals(err_msg, readPropertyFile.getErrorMessageForAlphanumericNewPassword(),
+				"Application should show Error Message as 'Password must contain at least 7 characters'");
 	}
 	
-	@When("User enters password as greater than 8 character")
+	@When("User enters valid username and password as greater than 7 character")
 	public void enterPswGreaterThanEightChar() {
 		LoginPage lp = new LoginPage();
-		lp.enterPassword("abcdefghi");
+		lp.enterUsername("Admin");
+		lp.enterPassword("Yogita123");
 	}
 	
 	@And("Click On login button For invalid credentials")
@@ -335,10 +195,115 @@ public class UserLoginSteps {
 	@Then("Application should show Error Message as 'Password must contain at least one uppercase letter, one lowercase letter, one special character and one number'")
 	public void checkErrorMsgPswGreaterthanEightChar() {
 		LoginPage lp = new LoginPage();
-		String err_msg=lp.getErrorMessageForPassword();
-		Assert.assertEquals(err_msg, readPropertyFile.getErrorMessagePasswordLessThanEight(),
+		String err_msg=lp.getErrorMessage();
+		Assert.assertEquals(err_msg, readPropertyFile.getErrorMessageForAlphanumericNewPassword(),
 				"Application should show Error Message as 'Password must contain at least one uppercase letter, one lowercase letter, one special character and one number'");
 	}
 	
-
+	@When("User enters valid username and password of 7 character")
+	public void EnterValUsernmPswSevenChar()
+	{
+		LoginPage lp = new LoginPage();
+		lp.enterUsername("Admin");
+		lp.enterPassword("Yogita12");
+		
+	}
+	
+	@And("Click On login Button For invalid credential")
+	public void clickLoginButtonInvalCred() {
+		LoginPage lp = new LoginPage();
+		lp.clickOnLogin();
+	}
+	
+	@Then("Application should Display Error Message as 'Password must contain at least one uppercase letter, one lowercase letter, one special character and one number'")
+	public void checkErrorMsgPswSevenChar() {
+		LoginPage lp = new LoginPage();
+		String err_msg=lp.getErrorMessage();
+		Assert.assertEquals(err_msg, readPropertyFile.getErrorMessageForAlphanumericNewPassword(),
+				"Application should Display Error Message as 'Password must contain at least one uppercase letter, one lowercase letter, one special character and one number'");
+	}
+	
+	@When("User enters valid username and password without uppercase letter")
+	public void enterValUsernmPswLowerCase() {
+		LoginPage lp = new LoginPage();
+		lp.enterUsername("Admin");
+		lp.enterPassword("yogitaas");
+	}
+	
+	@And("Click On login button For Invalid credentials")
+	public void clickLoginButtonLowerPsw() {
+		LoginPage lp = new LoginPage();
+		lp.clickOnLogin();
+	}
+	
+	@Then("Application Should Display Error Message as 'Password must contain at least one uppercase letter, one lowercase letter, one special character and one number'")
+	public void checkErrorMsgPswLowerChar() {
+		LoginPage lp = new LoginPage();
+		String err_msg=lp.getErrorMessage();
+		Assert.assertEquals(err_msg, readPropertyFile.getErrorMessageForAlphanumericNewPassword(),
+				"Application Should Display Error Message as 'Password must contain at least one uppercase letter, one lowercase letter, one special character and one number'");
+	}
+	
+	@When("User enters valid username and password without lowercase letter")
+	public void enterValUsernmPswupperCase() {
+		LoginPage lp = new LoginPage();
+		lp.enterUsername("Admin");
+		lp.enterPassword("ADMINAD");
+	}
+	
+	@And("Click on login button For Invalid credentials")
+	public void clickLoginButtonUpperCasePsw() {
+		LoginPage lp = new LoginPage();
+		lp.clickOnLogin();
+	}
+	
+	@Then("Application should display Error Message as 'Password must contain at least one uppercase letter, one lowercase letter, one special character and one number'")
+	public void checkErrorMsgPswUpperChar() {
+		LoginPage lp = new LoginPage();
+		String err_msg=lp.getErrorMessage();
+		Assert.assertEquals(err_msg, readPropertyFile.getErrorMessageForAlphanumericNewPassword(),
+				"Application should display Error Message as 'Password must contain at least one uppercase letter, one lowercase letter, one special character and one number'");
+	}
+	
+	@When("User enters valid username and password as number")
+	public void enterValUsernmPswnum() {
+		LoginPage lp = new LoginPage();
+		lp.enterUsername("Admin");
+		lp.enterPassword("1234567");
+	}
+	
+	@And("Click on login button For invalid Credentials")
+	public void clickLoginButtonPswNum() {
+		LoginPage lp = new LoginPage();
+		lp.clickOnLogin();
+	}
+	
+	@Then("Application should display an error Message as 'Password must contain at least one uppercase letter, one lowercase letter, one special character and one number'")
+	public void checkErrorMsgPswNum() {
+		LoginPage lp = new LoginPage();
+		String err_msg=lp.getErrorMessage();
+		Assert.assertEquals(err_msg, readPropertyFile.getErrorMessageForAlphanumericNewPassword(),
+				"Application should display an error Message as 'Password must contain at least one uppercase letter, one lowercase letter, one special character and one number'");
+	}
+	
+	@When("User enters valid username and password as special character")
+	public void enterValUsernmPswSpecialChar() {
+		LoginPage lp = new LoginPage();
+		lp.enterUsername("Admin");
+		lp.enterPassword("@#$%&");
+	}
+	
+	@And("Click on login button For Invalid Credentials")
+	public void clickLoginButtonPswSpecialChar() {
+		LoginPage lp = new LoginPage();
+		lp.clickOnLogin();
+	}
+	
+	@Then("Application should display an Error Message as 'Password must contain at least one uppercase letter, one lowercase letter, one special character and one number'")
+	public void checkErrorMsgPswSpecialChar() {
+		LoginPage lp = new LoginPage();
+		String err_msg=lp.getErrorMessage();
+		Assert.assertEquals(err_msg, readPropertyFile.getErrorMessageForAlphanumericNewPassword(),
+				"Application should display an error Message as 'Password must contain at least one uppercase letter, one lowercase letter, one special character and one number'");
+	}
 }
