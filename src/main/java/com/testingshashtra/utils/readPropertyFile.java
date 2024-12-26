@@ -35,8 +35,17 @@ public class readPropertyFile {
 	public static String getErrorMessageUsername() {
 		return PropUtils.loadFile(fpathError, "errorMessageUsername");
 	}
-	public static String getsuccessMsgResetLinkSent() {
-		return PropUtils.loadFile(fpathError, "successMsgResetLinkSent");
+	
+	public static String getErrorMessageForAlphanumericNewPassword() {
+		return PropUtils.loadFile(fpathError, "ErrorMessagePassword");
+	}
+	
+	public static String getErrorMessageNewPassword() {
+		return PropUtils.loadFile(fpathError, "ErrorNewPAssword");
+	}
+	
+	public static String getErrorMessageConfirmPassword() {
+		return PropUtils.loadFile(fpathError, "ErrorMessageConfirmPassword");
 	}
 	
 }

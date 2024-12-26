@@ -2,8 +2,8 @@ Feature: This feature file includes all the testcases related to forgot password
 
 Scenario: To verify when user click on forgot password button then user should redirect to reset password page
 
-	When User click on forgot password link 
-	Then It should successfully redirected to reset password page of orangeHRM
+		When User click on forgot password link 
+		Then It should successfully redirected to reset password page of orangeHRM
 	
 Scenario: To verify when user enters blank username 
 
