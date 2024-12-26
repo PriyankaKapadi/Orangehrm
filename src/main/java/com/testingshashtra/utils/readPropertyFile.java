@@ -36,7 +36,16 @@ public class readPropertyFile {
 		return PropUtils.loadFile(fpathError, "errorMessageUsername");
 	}
 	
-	public static String getErrorMessagePasswordLessThanEight() {
-		return PropUtils.loadFile(fpathError, "PasswordErrMessageLessThanEightChar");
+	public static String getErrorMessageForAlphanumericNewPassword() {
+		return PropUtils.loadFile(fpathError, "ErrorMessagePassword");
 	}
+	
+	public static String getErrorMessageNewPassword() {
+		return PropUtils.loadFile(fpathError, "ErrorNewPAssword");
+	}
+	
+	public static String getErrorMessageConfirmPassword() {
+		return PropUtils.loadFile(fpathError, "ErrorMessageConfirmPassword");
+	}
+	
 }
