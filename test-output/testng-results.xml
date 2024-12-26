@@ -30,10 +30,26 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA["This feature file includes all test cases related to Update Password Page of Orangehrm"]]>
+                <![CDATA["This feature file includes all test cases related to Login Page of Orangehrm"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Application display  an error message as 'Invalid Credentials' instead it should show error message as 'Please enter valid Creadentials' expected [Please enter valid credentials] but found [Required]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Application display  an error message as 'Invalid Credentials' instead it should show error message as 'Please enter valid Creadentials' expected [Please enter valid credentials] but found [Required]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at com.testingshashtra.stepdefinition.UserLoginSteps.checkErrorMessageValidUsernmBlankPsw(UserLoginSteps.java:158)
+at ✽.Application display error message as 'Required' instead it should show error message as 'Please enter valid Creadentials'(file:///D:/OrangeHrmClone/Orangehrm/src/test/resources/Features/orangehrm-login.feature:43)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->

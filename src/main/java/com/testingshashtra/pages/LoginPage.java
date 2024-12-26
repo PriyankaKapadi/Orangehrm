@@ -3,7 +3,6 @@ package com.testingshashtra.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.testingshashtra.base.Keywords;
 import com.testingshashtra.utils.readPropertyFile;
 import com.testingshashtra.wait.WaitFor;
@@ -22,7 +21,7 @@ public class LoginPage {
 
 	@FindBy(css = "button[type='submit']")
 	private static WebElement loginButton;
-	
+
 	@FindBy(css = "p.oxd-alert-content-text")
 	private static WebElement errorMessageInvalidCredential;
 
@@ -34,7 +33,11 @@ public class LoginPage {
 
 	@FindBy(css = "button.orangehrm-forgot-password-button--reset")
 	private static WebElement resetPasswordButton;
-
+	
+	
+	@FindBy(css = "div.orangehrm-login-form>form>div+div>div>span")
+	private static WebElement passwordErrorMessage;
+	
 	public void enterUsername(String usernm) {
 		WaitFor.visibilityOfElement(username);
 		Keywords.enterTextTo(username, usernm);
@@ -68,5 +71,10 @@ public class LoginPage {
 	public void clickOnForgotPasswordLink() {
 		WaitFor.visibilityOfElement(forgotPassword);
 		Keywords.clickOnWebElement(forgotPassword);
+	}
+	
+	public String getErrorMessageForPassword() {
+		WaitFor.visibilityOfElement(passwordErrorMessage);
+		return Keywords.getMessage(passwordErrorMessage);
 	}
 }
