@@ -35,4 +35,8 @@ public class readPropertyFile {
 	public static String getErrorMessageUsername() {
 		return PropUtils.loadFile(fpathError, "errorMessageUsername");
 	}
+	
+	public static String getErrorMessagePasswordLessThanEight() {
+		return PropUtils.loadFile(fpathError, "PasswordErrMessageLessThanEightChar");
+	}
 }
