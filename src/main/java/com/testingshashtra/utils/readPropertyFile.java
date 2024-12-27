@@ -19,6 +19,10 @@ public class readPropertyFile {
 	public static String getPassword() {
 		return PropUtils.loadFile(filepath, "password");
 	}
+	
+	public static String getsuccessMsgResetLinkSent() {
+		return PropUtils.loadFile(fpathError, "successMsgResetLinkSent");
+	}
 
 	public static String getErrorMessage() {
 		return PropUtils.loadFile(fpathError, "errorMessage");

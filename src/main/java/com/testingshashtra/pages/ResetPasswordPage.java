@@ -23,6 +23,9 @@ public class ResetPasswordPage {
 
 	@FindBy(css = "span.oxd-input-field-error-message")
 	private static WebElement errorMessage;
+	
+	@FindBy(css = "h6.orangehrm-forgot-password-title")
+	private static WebElement linkSentMessage;
 
 	public void enterUsername(String usernm) {
 		WaitFor.visibilityOfElement(username);
@@ -45,4 +48,16 @@ public class ResetPasswordPage {
 		WaitFor.visibilityOfElement(errorMessage);
 		return Keywords.getTextFrom(errorMessage);
 	}
+	
+	public String getLinkSentMessage() {
+		WaitFor.visibilityOfElement(linkSentMessage);
+		return Keywords.getTextFrom(linkSentMessage);
+	}
+	
+	public boolean isAvailableUsernameField() {
+		WaitFor.visibilityOfElement(username);
+		return Keywords.elementIsDisplayed(username);
+
+	}
+	
 }
