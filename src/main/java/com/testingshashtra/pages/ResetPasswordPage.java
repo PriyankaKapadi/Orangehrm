@@ -53,4 +53,11 @@ public class ResetPasswordPage {
 		WaitFor.visibilityOfElement(linkSentMessage);
 		return Keywords.getTextFrom(linkSentMessage);
 	}
+	
+	public boolean isAvailableUsernameField() {
+		WaitFor.visibilityOfElement(username);
+		return Keywords.elementIsDisplayed(username);
+
+	}
+	
 }
