@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Dec 25 16:14:46 IST 2024</td>
+<td>Started on:</td><td>Thu Dec 26 19:12:29 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>63 seconds (63545 ms)</td>
+<tr><td>Total time:</td><td>47 seconds (47816 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,20 +76,27 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.testingshashtra.runner.FeatureRunner.runScenario()'><b>runScenario</b><br>Test class: com.testingshashtra.runner.FeatureRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify when user enters current password and click on cancel button then it should redirected to dashboard", "This feature file includes all test cases related to Update Password Page of Orangehrm"</td>
-<td></td>
-<td>20</td>
-<td>com.testingshashtra.runner.FeatureRunner@2de56eb2</td></tr>
-<tr>
-<td title='com.testingshashtra.runner.FeatureRunner.runScenario()'><b>runScenario</b><br>Test class: com.testingshashtra.runner.FeatureRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify when user enters new password and click on cancel button then it should redirected to dashboard", "This feature file includes all test cases related to Update Password Page of Orangehrm"</td>
-<td></td>
-<td>17</td>
-<td>com.testingshashtra.runner.FeatureRunner@2de56eb2</td></tr>
-<tr>
-<td title='com.testingshashtra.runner.FeatureRunner.runScenario()'><b>runScenario</b><br>Test class: com.testingshashtra.runner.FeatureRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify when user enters confirm password and click on cancel button then it should redirected to dashboard", "This feature file includes all test cases related to Update Password Page of Orangehrm"</td>
-<td></td>
-<td>24</td>
-<td>com.testingshashtra.runner.FeatureRunner@2de56eb2</td></tr>
+<td title='com.testingshashtra.runner.FeatureRunner.runScenario()'><b>runScenario</b><br>Test class: com.testingshashtra.runner.FeatureRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify when user enters password as special character", "This feature file includes all test cases related to Login Page of Orangehrm"</td>
+<td><div><pre>java.lang.AssertionError: Application should display an error Message as &apos;Password must contain at least one uppercase letter, one lowercase letter, one special character and one number&apos; expected [Password must be alphanumeric with atleast seven characters] but found [Invalid credentials]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.testingshashtra.stepdefinition.UserLoginSteps.checkErrorMsgPswSpecialChar(UserLoginSteps.java:447)
+	at ✽.Application should display an Error Message as &apos;Password must contain at least one uppercase letter, one lowercase letter, one special character and one number&apos;(file:///D:/OrangeHrmClone/Orangehrm/src/test/resources/Features/orangehrm-login.feature:127)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1029148906", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1029148906'><pre>java.lang.AssertionError: Application should display an error Message as &apos;Password must contain at least one uppercase letter, one lowercase letter, one special character and one number&apos; expected [Password must be alphanumeric with atleast seven characters] but found [Invalid credentials]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.testingshashtra.stepdefinition.UserLoginSteps.checkErrorMsgPswSpecialChar(UserLoginSteps.java:447)
+	at ✽.Application should display an Error Message as &apos;Password must contain at least one uppercase letter, one lowercase letter, one special character and one number&apos;(file:///D:/OrangeHrmClone/Orangehrm/src/test/resources/Features/orangehrm-login.feature:127)
+</pre></div></td>
+<td>47</td>
+<td>com.testingshashtra.runner.FeatureRunner@10aa41f2</td></tr>
 </table><p>
 </body>
 </html>
