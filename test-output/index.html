@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\DELL\AppData\Local\Temp\testng-eclipse--1592572808\testng-customsuite.xml</span>
+                    <span>C:\Users\rupes\AppData\Local\Temp\testng-eclipse-239571796\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.testingshashtra.runner.FeatureRunner" class="method navigator-link" hash-for-method="runScenario(&quot;To verify when user enters password as special character&quot;, &quot;This feature file includes all test cas...)">runScenario("To verify when user enters password as special character", "This feature file includes all test cas...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.testingshashtra.runner.FeatureRunner" class="method navigator-link" hash-for-method="runScenario(&quot;To verify when user enters Invalid username for Space Only&quot;, &quot;This feature file includes all the te...)">runScenario("To verify when user enters Invalid username for Space Only", "This feature file includes all the te...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -126,18 +126,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;To verify when user enters password as special character&quot;, &quot;This feature file includes all test cas...)">
-                  </a> <!-- runScenario("To verify when user enters password as special character", "This feature file includes all test cas...) -->
+                  <a name="runScenario(&quot;To verify when user enters Invalid username for Space Only&quot;, &quot;This feature file includes all the te...)">
+                  </a> <!-- runScenario("To verify when user enters Invalid username for Space Only", "This feature file includes all the te...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("To verify when user enters password as special character","This feature file includes all test cases related to Login Page of Orangehrm")</span>
-                  <div class="stack-trace">java.lang.AssertionError: Application should display an error Message as &apos;Password must contain at least one uppercase letter, one lowercase letter, one special character and one number&apos; expected [Password must be alphanumeric with atleast seven characters] but found [Invalid credentials]
+                  <span class="parameters">("To verify when user enters Invalid username for Space Only","This feature file includes all the testcases related to forgot password of orangeHRM")</span>
+                  <div class="stack-trace">java.lang.AssertionError: It does not display error message as&apos;Please enter valid username&apos; expected [Please enter valid Username] but found [Required]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.testingshashtra.stepdefinition.UserLoginSteps.checkErrorMsgPswSpecialChar(UserLoginSteps.java:447)
-	at ✽.Application should display an Error Message as &apos;Password must contain at least one uppercase letter, one lowercase letter, one special character and one number&apos;(file:///D:/OrangeHrmClone/Orangehrm/src/test/resources/Features/orangehrm-login.feature:127)
+	at com.testingshashtra.stepdefinition.ForgotPasswordSteps.verifyInvalidUsernameErrorMessageForSpace(ForgotPasswordSteps.java:259)
+	at ✽.It should show error message as &apos;Please enter valid username&apos; for Space Only(file:///E:/TestingShastra/Workspace/OrangeHRM/src/test/resources/Features/forgot_Password.feature:69)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -149,7 +149,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\DELL\AppData\Local\Temp\testng-eclipse--1592572808\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\rupes\AppData\Local\Temp\testng-eclipse-239571796\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -210,12 +210,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.testingshashtra.runner.FeatureRunner')
-data.setCell(0, 3, 47352);
+data.setCell(0, 3, 12463);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 47 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -243,18 +243,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.testingshashtra.runner.FeatureRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@690bc15e)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@79b84841)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("To verify when user enters password as special character", "This feature file includes all test cas...)</span>
-                <span class="method-start">437 ms</span>
+                <span class="method-name">runScenario("To verify when user enters Invalid username for Space Only", "This feature file includes all the te...)</span>
+                <span class="method-start">757 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">47795 ms</span>
+                <span class="method-start">13226 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
