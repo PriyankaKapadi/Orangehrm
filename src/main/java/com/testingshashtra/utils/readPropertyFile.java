@@ -52,4 +52,8 @@ public class readPropertyFile {
 		return PropUtils.loadFile(fpathError, "ErrorMessageConfirmPassword");
 	}
 	
+	public static String getErrorMsgJobTitle() {
+		return PropUtils.loadFile(fpathError, "ErrorMsgJobTitle");
+	}
+	
 }

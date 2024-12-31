@@ -1,5 +1,5 @@
 Feature: This feature file include all test cases related to Add Employee
-@today
+
 Scenario: To verify when user enters First Name as numbers only
 	
 	When User logged into system for nos
