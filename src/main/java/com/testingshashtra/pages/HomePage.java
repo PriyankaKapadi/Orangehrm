@@ -27,7 +27,16 @@ public class HomePage {
 	
 	@FindBy(css = "input[name='username']")
 	private static WebElement checkForUsername;
-
+	
+	@FindBy(css = "nav.oxd-topbar-body-nav>ul>li+li+li+li")
+	private static WebElement qualificationDropdown;
+	
+	@FindBy(css = "ul.oxd-dropdown-menu>li:first-child>a")
+	private static WebElement Skills;
+	
+	@FindBy(css = "a[href=\"/web/index.php/admin/viewAdminModule\"]")
+	private static WebElement adminoOption;
+	
 	public void clickDropDownMenu() {
 		WaitFor.visibilityOfElement(dropDownMenu);
 		Keywords.clickOnWebElement(dropDownMenu);
@@ -50,5 +59,20 @@ public class HomePage {
 	public boolean checkForPresenceOfUsername() {
 		WaitFor.visibilityOfElement(checkForUsername);
 		return Keywords.elementIsDisplayed(checkForUsername);
+	}
+	
+	public void clickQualificationsDropDownMenu() {
+		WaitFor.visibilityOfElement(qualificationDropdown);
+		Keywords.clickOnWebElement(qualificationDropdown);
+	}
+	
+	public void clickOnSkills() {
+		WaitFor.visibilityOfElement(Skills);
+		Keywords.clickOnWebElement(Skills);
+	}
+	
+	public void clickOnAdmin() {
+		WaitFor.visibilityOfElement(adminoOption);
+		Keywords.clickOnWebElement(adminoOption);
 	}
 }

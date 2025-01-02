@@ -52,4 +52,11 @@ public class readPropertyFile {
 		return PropUtils.loadFile(fpathError, "ErrorMessageConfirmPassword");
 	}
 	
+	public static String getErrorMessageNameField() {
+		return PropUtils.loadFile(fpathError, "ErrorMessageNameField");
+	}
+	
+	public static String getErrorMessageNameFieldMaxChar() {
+		return PropUtils.loadFile(fpathError, "ErrorMessageNameFieldMaxChar");
+	}
 }
