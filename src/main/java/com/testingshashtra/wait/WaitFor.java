@@ -22,6 +22,10 @@ public class WaitFor {
 	public static void visibilityOfElement(WebElement element) {
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
+	
+	public static boolean invisibilityOfElement(WebElement element) {
+		return wait.until(ExpectedConditions.invisibilityOf(element));
+	}
 
 	public static void elementToBeClickable(WebElement element) {
 		wait.until(ExpectedConditions.elementToBeClickable(element));

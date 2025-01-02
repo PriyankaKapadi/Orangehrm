@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -71,7 +72,8 @@ public abstract class Keywords {
 		return element.getText();
 	}
 	
-	public static boolean elementIsClickable(WebElement element) {
-		return element.isEnabled();
+	public static void moveToAnyElement(WebElement element) {
+		Actions action=new Actions(driver);
+		action.moveToElement(element).click().perform();
 	}
 }

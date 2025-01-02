@@ -55,11 +55,17 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
+<<<<<<< HEAD
 <td>Started on:</td><td>Thu Dec 26 22:28:28 IST 2024</td>
 </tr>
 <tr><td>Total time:</td><td>60 seconds (60374 ms)</td>
+=======
+<td>Started on:</td><td>Thu Jan 02 15:07:07 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>94 seconds (94630 ms)</td>
+>>>>>>> cbdd5163d116ec57f9e4841b0f9363530ec6a401
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,6 +82,7 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<<<<<<< HEAD
 <td title='com.testingshashtra.runner.FeatureRunner.runScenario()'><b>runScenario</b><br>Test class: com.testingshashtra.runner.FeatureRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify when user enters valid username then user should get reset password link", "This feature file includes all the testcases related to forgot password of orangeHRM"</td>
 <td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: button.orangehrm-forgot-password-button--reset&apos; (tried for 50 second(s) with 200 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
@@ -92,6 +99,24 @@ Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Command: [dc5944e7-15dc-4603-99b8-060ce2693883, findElement {using=css selector, value=button.orangehrm-forgot-password-button--reset}]
 Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:debuggerAddress: 127.0.0.1:12602, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 23792, moz:profile: C:\Users\rupes\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12602/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
 Session ID: dc5944e7-15dc-4603-99b8-060ce2693883
+=======
+<td title='com.testingshashtra.runner.FeatureRunner.runScenario()'><b>runScenario</b><br>Test class: com.testingshashtra.runner.FeatureRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify when user enters First Name as blank", "This feature file include all test cases related to Add Employee"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: span.oxd-input-field-error-message&apos; (tried for 50 second(s) with 200 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.testingshashtra.wait.WaitFor.visibilityOfElement(WaitFor.java:23)
+	at com.testingshashtra.pages.AddEmployeePage.getErrorMessage(AddEmployeePage.java:92)
+	at com.testingshashtra.stepdefinition.AddEmployeeSteps.checkForErrorMsgForBlank(AddEmployeeSteps.java:347)
+	at ?.It should display error msg as&apos;Please enter valid First Name&apos; for blank(file:///E:/Workspace/Orangehrm/src/test/resources/Features/add_Employee.feature:73)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: span.oxd-input-field-error-message
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [621d3fcf-48e6-40d4-8d67-f45359d05c33, findElement {using=css selector, value=span.oxd-input-field-error-message}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:debuggerAddress: 127.0.0.1:43985, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20216, moz:profile: C:\Users\hp\AppData\Local\T..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:43985/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 621d3fcf-48e6-40d4-8d67-f45359d05c33
+>>>>>>> cbdd5163d116ec57f9e4841b0f9363530ec6a401
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -114,8 +139,13 @@ Session ID: dc5944e7-15dc-4603-99b8-060ce2693883
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
 	at com.testingshashtra.wait.WaitFor.visibilityOfElement(WaitFor.java:23)
+<<<<<<< HEAD
 	at com.testingshashtra.pages.ResetPasswordPage.clickOnResetPasswordButton(ResetPasswordPage.java:42)
 	at com.testingshashtra.stepdefinition.ForgotPasswordSteps.clickOnResetButton(ForgotPasswordSteps.java:108)
+=======
+	at com.testingshashtra.pages.AddEmployeePage.getErrorMessage(AddEmployeePage.java:92)
+	at com.testingshashtra.stepdefinition.AddEmployeeSteps.checkForErrorMsgForBlank(AddEmployeeSteps.java:347)
+>>>>>>> cbdd5163d116ec57f9e4841b0f9363530ec6a401
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
@@ -162,6 +192,7 @@ Session ID: dc5944e7-15dc-4603-99b8-060ce2693883
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+<<<<<<< HEAD
 </pre></div><a href='#' onClick='toggleBox("stack-trace1495382332", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
 <div class='stack-trace' id='stack-trace1495382332'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: button.orangehrm-forgot-password-button--reset&apos; (tried for 50 second(s) with 200 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
@@ -178,6 +209,24 @@ Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Command: [dc5944e7-15dc-4603-99b8-060ce2693883, findElement {using=css selector, value=button.orangehrm-forgot-password-button--reset}]
 Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:debuggerAddress: 127.0.0.1:12602, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 23792, moz:profile: C:\Users\rupes\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12602/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
 Session ID: dc5944e7-15dc-4603-99b8-060ce2693883
+=======
+</pre></div><a href='#' onClick='toggleBox("stack-trace1267168782", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1267168782'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: span.oxd-input-field-error-message&apos; (tried for 50 second(s) with 200 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.testingshashtra.wait.WaitFor.visibilityOfElement(WaitFor.java:23)
+	at com.testingshashtra.pages.AddEmployeePage.getErrorMessage(AddEmployeePage.java:92)
+	at com.testingshashtra.stepdefinition.AddEmployeeSteps.checkForErrorMsgForBlank(AddEmployeeSteps.java:347)
+	at ?.It should display error msg as&apos;Please enter valid First Name&apos; for blank(file:///E:/Workspace/Orangehrm/src/test/resources/Features/add_Employee.feature:73)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: span.oxd-input-field-error-message
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [621d3fcf-48e6-40d4-8d67-f45359d05c33, findElement {using=css selector, value=span.oxd-input-field-error-message}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:debuggerAddress: 127.0.0.1:43985, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20216, moz:profile: C:\Users\hp\AppData\Local\T..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:43985/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 621d3fcf-48e6-40d4-8d67-f45359d05c33
+>>>>>>> cbdd5163d116ec57f9e4841b0f9363530ec6a401
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -200,8 +249,13 @@ Session ID: dc5944e7-15dc-4603-99b8-060ce2693883
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
 	at com.testingshashtra.wait.WaitFor.visibilityOfElement(WaitFor.java:23)
+<<<<<<< HEAD
 	at com.testingshashtra.pages.ResetPasswordPage.clickOnResetPasswordButton(ResetPasswordPage.java:42)
 	at com.testingshashtra.stepdefinition.ForgotPasswordSteps.clickOnResetButton(ForgotPasswordSteps.java:108)
+=======
+	at com.testingshashtra.pages.AddEmployeePage.getErrorMessage(AddEmployeePage.java:92)
+	at com.testingshashtra.stepdefinition.AddEmployeeSteps.checkForErrorMsgForBlank(AddEmployeeSteps.java:347)
+>>>>>>> cbdd5163d116ec57f9e4841b0f9363530ec6a401
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
@@ -249,8 +303,27 @@ Session ID: dc5944e7-15dc-4603-99b8-060ce2693883
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
+<<<<<<< HEAD
 <td>59</td>
 <td>com.testingshashtra.runner.FeatureRunner@5f8e8a9d</td></tr>
+=======
+<td>68</td>
+<td>com.testingshashtra.runner.FeatureRunner@2de56eb2</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.testingshashtra.runner.FeatureRunner.runScenario()'><b>runScenario</b><br>Test class: com.testingshashtra.runner.FeatureRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify when user enter job title as string only", "This feature file include all test cases related to Add Job Title"</td>
+<td></td>
+<td>25</td>
+<td>com.testingshashtra.runner.FeatureRunner@2de56eb2</td></tr>
+>>>>>>> cbdd5163d116ec57f9e4841b0f9363530ec6a401
 </table><p>
 </body>
 </html>
