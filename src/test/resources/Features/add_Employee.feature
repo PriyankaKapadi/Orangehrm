@@ -1,5 +1,14 @@
 Feature: This feature file include all test cases related to Add Employee
 
+Scenario: To verify when user enters valid First Name only
+	
+	When User logged into system for valid
+	And click on PIM menu for valid
+	And click on add employee button for valid
+	And user enters firstname as characters
+	And enter Middle,Last Name and click save valid 
+	Then It should successfully save details of employee
+
 Scenario: To verify when user enters First Name as numbers only
 	
 	When User logged into system for nos
