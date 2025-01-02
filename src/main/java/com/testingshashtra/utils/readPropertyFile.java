@@ -56,6 +56,10 @@ public class readPropertyFile {
 		return PropUtils.loadFile(fpathError, "ErrorMsgJobTitle");
 	}
 	
+
+	public static String getErrorMsgJobTitleMaxLength() {
+		return PropUtils.loadFile(fpathError, "ErrorMsgJobTitleMaxlen");
+	}
 	public static String getErrorMessageFirstName() {
 		return PropUtils.loadFile(fpathError, "ErrorMsgFirstName");
 	}

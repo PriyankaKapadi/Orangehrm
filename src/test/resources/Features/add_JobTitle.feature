@@ -23,7 +23,6 @@ Scenario: To verify when user enter job title as space only
 	And enter Job description
 	And click on save button
 	Then It should display an error messsage as 'Please enter valid Job Title'
-	
 
 Scenario: To verify when user enter job title as number only
 	
@@ -48,8 +47,7 @@ Scenario: To verify when user enter job title as special character only
 	And enter Job descriptions for special character 
 	And click on save Button for special character
 	Then It should display an Error messsage as 'Please enter valid Job title'
-	
-@today
+
 Scenario: To verify when user enter job title as string only
 	
 	When User logged into system for job Title as string
@@ -61,3 +59,99 @@ Scenario: To verify when user enter job title as string only
 	And enter Job descriptions for string 
 	And click on save Button for string
 	Then It should display record found Message
+	
+Scenario: To verify when user enter job title as alphanumeric only
+	
+	When User logged into system for job Title as alphanumeric
+	And click on admin for Job Page
+	And click on Job dropdown
+	And select job title for alphanumeric
+	And click on +Add Button for alphanumeric
+	And enter title as alphanumeric
+	And enter Job descriptions for alphanumeric 
+	And click on save Button for alphanumeric
+	Then It should display record found Message for alphanumeric
+
+Scenario: To verify when user enter job title with Hyphenated words
+	
+	When User logged into system for job Title with Hyphenated words
+	And click on admin for Job page 
+	And click on Job dropdown for job Title with Hyphenated words
+	And select job title with Hyphenated words
+	And click on +Add Button for job Title with Hyphenated words
+	And enter title as Hyphenated words
+	And enter Job descriptions for job Title with Hyphenated words
+	And click on save Button for job Title with Hyphenated words
+	Then It should display record found Message with Hyphenated words
+
+Scenario: To verify when user enter job title with special character
+	
+	When User logged into system for job Title with special character
+	And click on Admin for Job pages 
+	And click on Job dropdown for job Title with special character
+	And select job title with special character
+	And click on +Add Button for job Title with special character
+	And enter title with special character
+	And enter Job descriptions for job Title with special character
+	And click on save Button for job Title with special character
+	Then It should display record found Message with special character
+
+Scenario: To verify when user enter job title with multiple words
+	
+	When User logged into system for job Title with multiple words
+	And click on Admin for Job page 
+	And click on Job dropdown for job Title with multiple words
+	And select job title with multiple words
+	And click on +Add Button for job Title with multiple words
+	And enter title as multiple words
+	And enter Job descriptions for job Title with multiple words
+	And click on save Button for job Title with multiple words
+	Then It should display record found Message with multiple words
+	
+Scenario: To verify when user enter job title with number
+	
+	When User logged into system for job Title with number
+	And click on Admin for Job pages.  
+	And click on Job dropdown for job Title with number
+	And select job title with number
+	And click on +Add Button for job Title with number
+	And enter title with number
+	And enter Job descriptions for job Title with number
+	And click on save Button for job Title with number
+	Then It should display record found Message with number
+
+Scenario: To verify when user enter job title with mixed case
+	
+	When User logged into system for job Title with mixed case
+	And click On admin for Job page  
+	And click on Job dropdown for job Title with mixed case
+	And select job title with mixed case
+	And click on +Add Button for job Title with mixed case
+	And enter title with mixed case
+	And enter Job descriptions for job Title with mixed case
+	And click on save Button for job Title with mixed case
+	Then It should display record found Message with mixed case	
+
+Scenario: To verify when user enter job title with Apostrophes
+	
+	When User logged into system for job Title with Apostrophes
+	And click on admin for Job pages  
+	And click on Job dropdown for job Title with Apostrophes
+	And select job title with Apostrophes
+	And click on +Add Button for job Title with Apostrophes
+	And enter title with Apostrophes
+	And enter Job descriptions for job Title with Apostrophes
+	And click on save Button for job Title with Apostrophes
+	Then It should display record found Message Apostrophes
+
+Scenario: To verify when user enter job title with  maximum character more than 100
+	
+	When User logged into system for job Title with maximum character
+	And click on admin for Job pages for maximum character  
+	And click on Job dropdown for job Title with maximum character
+	And select job title with maximum character
+	And click on +Add Button for job Title with maximum character
+	And enter title with maximum character
+	And enter Job descriptions for job Title with maximum character
+	And click on save Button for job Title with maximum character
+	Then It should display record found Message maximum character

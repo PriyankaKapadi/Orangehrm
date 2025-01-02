@@ -9,27 +9,6 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<<<<<<< HEAD
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">60,374</td><td></td><td></td></tr>
-</table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.testingshashtra.runner.FeatureRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1735232309357</td><td rowspan="1">59509</td></tr></tbody>
-</table>
-<h2>Default test</h2><h3 id="m0">com.testingshashtra.runner.FeatureRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;To verify when user enters valid username then user should get reset password link&quot;</td><td>&quot;This feature file includes all the testcases related to forgot password of orangeHRM&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: button.orangehrm-forgot-password-button--reset&apos; (tried for 50 second(s) with 200 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.testingshashtra.wait.WaitFor.visibilityOfElement(WaitFor.java:23)
-	at com.testingshashtra.pages.ResetPasswordPage.clickOnResetPasswordButton(ResetPasswordPage.java:42)
-	at com.testingshashtra.stepdefinition.ForgotPasswordSteps.clickOnResetButton(ForgotPasswordSteps.java:108)
-	at ✽.click on Reset Password button on Reset password page(file:///E:/TestingShastra/Workspace/OrangeHRM/src/test/resources/Features/forgot_Password.feature:30)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: button.orangehrm-forgot-password-button--reset
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [dc5944e7-15dc-4603-99b8-060ce2693883, findElement {using=css selector, value=button.orangehrm-forgot-password-button--reset}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:debuggerAddress: 127.0.0.1:12602, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 23792, moz:profile: C:\Users\rupes\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12602/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: dc5944e7-15dc-4603-99b8-060ce2693883
-=======
 <tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">94,630</td><td></td><td></td></tr>
 </table>
 <table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.testingshashtra.runner.FeatureRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1735810628928</td><td rowspan="1">68245</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.testingshashtra.runner.FeatureRunner</td><td><a href="#m1">runScenario</a></td><td rowspan="1">1735810697210</td><td rowspan="1">25265</td></tr></tbody>
@@ -49,7 +28,6 @@ Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Command: [621d3fcf-48e6-40d4-8d67-f45359d05c33, findElement {using=css selector, value=span.oxd-input-field-error-message}]
 Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:debuggerAddress: 127.0.0.1:43985, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20216, moz:profile: C:\Users\hp\AppData\Local\T..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:43985/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
 Session ID: 621d3fcf-48e6-40d4-8d67-f45359d05c33
->>>>>>> cbdd5163d116ec57f9e4841b0f9363530ec6a401
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -72,13 +50,8 @@ Session ID: 621d3fcf-48e6-40d4-8d67-f45359d05c33
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
 	at com.testingshashtra.wait.WaitFor.visibilityOfElement(WaitFor.java:23)
-<<<<<<< HEAD
-	at com.testingshashtra.pages.ResetPasswordPage.clickOnResetPasswordButton(ResetPasswordPage.java:42)
-	at com.testingshashtra.stepdefinition.ForgotPasswordSteps.clickOnResetButton(ForgotPasswordSteps.java:108)
-=======
 	at com.testingshashtra.pages.AddEmployeePage.getErrorMessage(AddEmployeePage.java:92)
 	at com.testingshashtra.stepdefinition.AddEmployeeSteps.checkForErrorMsgForBlank(AddEmployeeSteps.java:347)
->>>>>>> cbdd5163d116ec57f9e4841b0f9363530ec6a401
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)

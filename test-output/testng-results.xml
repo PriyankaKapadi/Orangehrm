@@ -2,25 +2,12 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite started-at="2024-12-26T22:28:28 IST" name="Default suite" finished-at="2024-12-26T22:29:28 IST" duration-ms="60374">
-=======
   <suite started-at="2025-01-02T15:07:07 IST" name="Default suite" finished-at="2025-01-02T15:08:42 IST" duration-ms="94630">
->>>>>>> cbdd5163d116ec57f9e4841b0f9363530ec6a401
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testingshashtra.runner.FeatureRunner@2de56eb2]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-<<<<<<< HEAD
-    <test started-at="2024-12-26T22:28:28 IST" name="Default test" finished-at="2024-12-26T22:29:28 IST" duration-ms="60374">
-      <class name="com.testingshashtra.runner.FeatureRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.testingshashtra.runner.FeatureRunner@5f8e8a9d]" started-at="2024-12-26T22:28:28 IST" name="setUpClass" finished-at="2024-12-26T22:28:29 IST" duration-ms="784" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@56826a75]]>
-=======
     <test started-at="2025-01-02T15:07:07 IST" name="Default test" finished-at="2025-01-02T15:08:42 IST" duration-ms="94630">
       <class name="com.testingshashtra.runner.FeatureRunner">
         <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.testingshashtra.runner.FeatureRunner@2de56eb2]" started-at="2025-01-02T15:07:07 IST" name="setUpClass" finished-at="2025-01-02T15:07:08 IST" duration-ms="995" status="PASS">
@@ -28,26 +15,17 @@
             <param index="0">
               <value>
                 <![CDATA[org.testng.TestRunner@16d41725]]>
->>>>>>> cbdd5163d116ec57f9e4841b0f9363530ec6a401
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-<<<<<<< HEAD
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testingshashtra.runner.FeatureRunner@5f8e8a9d]" started-at="2024-12-26T22:28:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-12-26T22:29:28 IST" duration-ms="59509" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["To verify when user enters valid username then user should get reset password link"]]>
-=======
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testingshashtra.runner.FeatureRunner@2de56eb2]" started-at="2025-01-02T15:07:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T15:08:17 IST" duration-ms="68245" status="FAIL">
           <params>
             <param index="0">
               <value>
                 <![CDATA["To verify when user enters First Name as blank"]]>
->>>>>>> cbdd5163d116ec57f9e4841b0f9363530ec6a401
               </value>
             </param>
             <param index="1">
@@ -58,26 +36,6 @@
           </params>
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-<<<<<<< HEAD
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: button.orangehrm-forgot-password-button--reset' (tried for 50 second(s) with 200 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: button.orangehrm-forgot-password-button--reset' (tried for 50 second(s) with 200 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at com.testingshashtra.wait.WaitFor.visibilityOfElement(WaitFor.java:23)
-at com.testingshashtra.pages.ResetPasswordPage.clickOnResetPasswordButton(ResetPasswordPage.java:42)
-at com.testingshashtra.stepdefinition.ForgotPasswordSteps.clickOnResetButton(ForgotPasswordSteps.java:108)
-at ✽.click on Reset Password button on Reset password page(file:///E:/TestingShastra/Workspace/OrangeHRM/src/test/resources/Features/forgot_Password.feature:30)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: button.orangehrm-forgot-password-button--reset
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.25.0', revision: '8a8aea2337'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [dc5944e7-15dc-4603-99b8-060ce2693883, findElement {using=css selector, value=button.orangehrm-forgot-password-button--reset}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 133.0.3, moz:accessibilityChecks: false, moz:buildID: 20241209150345, moz:debuggerAddress: 127.0.0.1:12602, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 23792, moz:profile: C:\Users\rupes\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12602/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: dc5944e7-15dc-4603-99b8-060ce2693883
-=======
               <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: span.oxd-input-field-error-message' (tried for 50 second(s) with 200 milliseconds interval)]]>
             </message>
             <full-stacktrace>
@@ -119,13 +77,8 @@ at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions
 at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
 at com.testingshashtra.wait.WaitFor.visibilityOfElement(WaitFor.java:23)
-<<<<<<< HEAD
-at com.testingshashtra.pages.ResetPasswordPage.clickOnResetPasswordButton(ResetPasswordPage.java:42)
-at com.testingshashtra.stepdefinition.ForgotPasswordSteps.clickOnResetButton(ForgotPasswordSteps.java:108)
-=======
 at com.testingshashtra.pages.AddEmployeePage.getErrorMessage(AddEmployeePage.java:92)
 at com.testingshashtra.stepdefinition.AddEmployeeSteps.checkForErrorMsgForBlank(AddEmployeeSteps.java:347)
->>>>>>> cbdd5163d116ec57f9e4841b0f9363530ec6a401
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
@@ -178,14 +131,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-<<<<<<< HEAD
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.testingshashtra.runner.FeatureRunner@5f8e8a9d]" started-at="2024-12-26T22:29:28 IST" name="tearDownClass" finished-at="2024-12-26T22:29:28 IST" duration-ms="5" status="PASS">
-=======
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testingshashtra.runner.FeatureRunner@2de56eb2]" started-at="2025-01-02T15:08:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-01-02T15:08:42 IST" duration-ms="25265" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["To verify when user enter job title as string only"]]>
+                <![CDATA["To verify when user enter job title with Apostrophes"]]>
               </value>
             </param>
             <param index="1">
@@ -198,7 +148,6 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </reporter-output>
         </test-method> <!-- runScenario -->
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.testingshashtra.runner.FeatureRunner@2de56eb2]" started-at="2025-01-02T15:08:42 IST" name="tearDownClass" finished-at="2025-01-02T15:08:42 IST" duration-ms="3" status="PASS">
->>>>>>> cbdd5163d116ec57f9e4841b0f9363530ec6a401
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
