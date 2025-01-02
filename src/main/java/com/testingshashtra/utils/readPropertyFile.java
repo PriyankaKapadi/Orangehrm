@@ -60,4 +60,11 @@ public class readPropertyFile {
 		return PropUtils.loadFile(fpathError, "ErrorMsgFirstName");
 	}
 	
+	public static String getErrorMessageNameField() {
+		return PropUtils.loadFile(fpathError, "ErrorMessageNameField");
+	}
+	
+	public static String getErrorMessageNameFieldMaxChar() {
+		return PropUtils.loadFile(fpathError, "ErrorMessageNameFieldMaxChar");
+	}
 }

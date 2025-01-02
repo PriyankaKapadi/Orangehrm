@@ -85,7 +85,6 @@ Scenario: To verify when user enters combination of Special character and number
 	And click on Save button for combination of sp and num
 	Then It should show error message as 'Please Enter The valid skill' for combination of sp and num
 
-@today
 Scenario: To verify when user enters name as more than 120 characters
 
 	When User login successfully and select Admin for max char
