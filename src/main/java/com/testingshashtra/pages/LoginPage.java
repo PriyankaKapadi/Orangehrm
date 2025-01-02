@@ -68,10 +68,6 @@ public class LoginPage {
 		return Keywords.getMessage(errorMessageRequired);
 	}
 
-	public void clickOnForgotPasswordLink() {
-		WaitFor.visibilityOfElement(forgotPassword);
-		Keywords.elementIsClickable(forgotPassword);
-	}
 	
 	public String getErrorMessageForPassword() {
 		WaitFor.visibilityOfElement(passwordErrorMessage);
