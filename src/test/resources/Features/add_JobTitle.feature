@@ -11,7 +11,7 @@ Scenario: To verify when user enter job title as blank only
 	And enter job description
 	And click on Save button
 	Then It should display error messsage as 'Please enter valid Job Title'
-git 
+
 Scenario: To verify when user enter job title as space only
 	
 	When User logged into system for job Title
@@ -132,7 +132,6 @@ Scenario: To verify when user enter job title with mixed case
 	And click on save Button for job Title with mixed case
 	Then It should display record found Message with mixed case	
 
-@today
 Scenario: To verify when user enter job title with Apostrophes
 	
 	When User logged into system for job Title with Apostrophes
@@ -145,7 +144,6 @@ Scenario: To verify when user enter job title with Apostrophes
 	And click on save Button for job Title with Apostrophes
 	Then It should display record found Message Apostrophes
 
-@today
 Scenario: To verify when user enter job title with  maximum character more than 100
 	
 	When User logged into system for job Title with maximum character
