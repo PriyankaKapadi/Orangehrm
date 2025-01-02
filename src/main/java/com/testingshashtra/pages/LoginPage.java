@@ -70,7 +70,7 @@ public class LoginPage {
 
 	public void clickOnForgotPasswordLink() {
 		WaitFor.visibilityOfElement(forgotPassword);
-		Keywords.clickOnWebElement(forgotPassword);
+		Keywords.elementIsClickable(forgotPassword);
 	}
 	
 	public String getErrorMessageForPassword() {
