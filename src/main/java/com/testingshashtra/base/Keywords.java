@@ -70,4 +70,8 @@ public abstract class Keywords {
 	public static String getTextFrom(WebElement element) {
 		return element.getText();
 	}
+	
+	public static boolean elementIsClickable(WebElement element) {
+		return element.isEnabled();
+	}
 }
