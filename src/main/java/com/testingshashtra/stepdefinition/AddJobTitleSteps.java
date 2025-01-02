@@ -310,4 +310,479 @@ public class AddJobTitleSteps {
 		Assert.assertTrue(result);
 	}
 	
+	@When("User logged into system for job Title as alphanumeric")
+	public static void enterLoginforJobTitleAsAlphanumeric() {
+		LoginPage lp=new LoginPage();
+		lp.enterUsername("admin");
+		lp.enterPassword("admin123");
+		lp.clickOnLogin();
+	}
+	
+	@And("click on admin for Job Page")
+	public static void clickAdminJobTitlePageAlphanumeric() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnAdmin();
+	}
+	
+	@And("click on Job dropdown")
+	public static void clickOnJobDropDownListAlphanumeric() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnJob();
+	}
+	
+	@And("select job title for alphanumeric")
+	public static void selectJobTitleAlphanumeric() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnJobTitle();
+	}
+	
+	@And("click on +Add Button for alphanumeric")
+	public static void clickAddButtonsAlphanumeric() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnAdd();
+	}
+	
+	@And("enter title as alphanumeric")
+	public static void enterTitleAsAlphanumeric() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.enterTitle("Tester 2 to 5 year experiance");
+	}
+	
+	@And("enter Job descriptions for alphanumeric")
+	public static void enterJobdescriptionAlphanumeric() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.enterJobDescription("- Design, plan, execute and automate tests for software and manage test activities for applications under development.\r\n"
+				+ "- Utilize available test framework and tools and provide long-term strategy for automated testing of applications.\r\n"
+				+ "- Fluent in one or more of Test automation tools like Selenium and BDD frameworks like Cucumber.");
+	}
+	
+	@And("click on save Button for alphanumeric")
+	public static void clickSaveButtonAlphanumeric() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickSaveJobTitle();
+	}
+	
+	@Then("It should display record found Message for alphanumeric")
+	public static void checkJobTitleRecordFoundAlphanumeric() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		boolean result=jp.checkRecordFound();
+		Assert.assertTrue(result);
+	}
+	
+	@When("User logged into system for job Title with Hyphenated words")
+	public static void enterLoginforJobTitleHypen() {
+		LoginPage lp=new LoginPage();
+		lp.enterUsername("admin");
+		lp.enterPassword("admin123");
+		lp.clickOnLogin();
+	}
+	
+	@And("click on admin for Job page")
+	public static void clickAdminJobTitlePageHypen() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnAdmin();
+	}
+	
+	@And("click on Job dropdown for job Title with Hyphenated words")
+	public static void clickOnJobDropDownListHypen() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnJob();
+	}
+	
+	@And("select job title with Hyphenated words")
+	public static void selectJobTitleHypen() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnJobTitle();
+	}
+	
+	@And("click on +Add Button for job Title with Hyphenated words")
+	public static void clickAddButtonsHypen() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnAdd();
+	}
+	
+	@And("enter title as Hyphenated words")
+	public static void enterTitleAsHypen() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.enterTitle("Automation Test Engineer 2-4 year experiance");
+	}
+	
+	@And("enter Job descriptions for job Title with Hyphenated words")
+	public static void enterJobdescriptionHypen() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.enterJobDescription("- Design, plan, execute and automate tests for software and manage test activities for applications under development.\r\n"
+				+ "- Utilize available test framework and tools and provide long-term strategy for automated testing of applications.\r\n"
+				+ "- Fluent in one or more of Test automation tools like Selenium and BDD frameworks like Cucumber.");
+	}
+	
+	@And("click on save Button for job Title with Hyphenated words")
+	public static void clickSaveButtonHypen() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickSaveJobTitle();
+	}
+	
+	@Then("It should display record found Message with Hyphenated words")
+	public static void checkJobTitleRecordFoundHypen() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		boolean result=jp.checkRecordFound();
+		Assert.assertTrue(result);
+	}
+	
+	@When("User logged into system for job Title with special character")
+	public static void enterLoginforJobTitleSpecialCharacter() {
+		LoginPage lp=new LoginPage();
+		lp.enterUsername("admin");
+		lp.enterPassword("admin123");
+		lp.clickOnLogin();
+	}
+	
+	@And("click on Admin for Job pages")
+	public static void clickAdminJobTitle() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnAdmin();
+	}
+	
+	@And("click on Job dropdown for job Title with special character")
+	public static void clickOnJobDropDownListNum() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnJob();
+	}
+	
+	@And("select job title with special character")
+	public static void selectJobTitleNum() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnJobTitle();
+	}
+	
+	@And("click on +Add Button for job Title with special character")
+	public static void clickAddButtonsNum() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnAdd();
+	}
+	
+	@And("enter title with special character")
+	public static void enterTitleAsNum() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.enterTitle("C# Engineer");
+	}
+	
+	@And("enter Job descriptions for job Title with special character")
+	public static void enterJobdescriptionNum() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.enterJobDescription("- Design, plan, execute and automate tests for software and manage test activities for applications under development.\r\n"
+				+ "- Utilize available test framework and tools and provide long-term strategy for automated testing of applications.\r\n"
+				+ "- Fluent in one or more of Test automation tools like Selenium and BDD frameworks like Cucumber.");
+	}
+	
+	@And("click on save Button for job Title with special character")
+	public static void clickSaveButtonNum() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickSaveJobTitle();
+	}
+	
+	@Then("It should display record found Message with special character")
+	public static void checkJobTitleRecordFoundNum() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		boolean result=jp.checkRecordFound();
+		Assert.assertTrue(result);
+	}
+	
+	@When("User logged into system for job Title with multiple words")
+	public static void enterLoginforJobTitleMultiple() {
+		LoginPage lp=new LoginPage();
+		lp.enterUsername("admin");
+		lp.enterPassword("admin123");
+		lp.clickOnLogin();
+	}
+	
+	@And("click on Admin for Job page")
+	public static void clickAdminJobTitleMultiple() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnAdmin();
+	}
+	
+	@And("click on Job dropdown for job Title with multiple words")
+	public static void clickOnJobDropDownListMultiple() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnJob();
+	}
+	
+	@And("select job title with multiple words")
+	public static void selectJobTitleMultiple() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnJobTitle();
+	}
+	
+	@And("click on +Add Button for job Title with multiple words")
+	public static void clickAddButtonsMultiple() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnAdd();
+	}
+	
+	@And("enter title as multiple words")
+	public static void enterTitleAsMultiple() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.enterTitle("IT Project Manager");
+	}
+	
+	@And("enter Job descriptions for job Title with multiple words")
+	public static void enterJobdescriptionMultiple() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.enterJobDescription("- Design, plan, execute and automate tests for software and manage test activities for applications under development.\r\n"
+				+ "- Utilize available test framework and tools and provide long-term strategy for automated testing of applications.\r\n"
+				+ "- Fluent in one or more of Test automation tools like Selenium and BDD frameworks like Cucumber.");
+	}
+	
+	@And("click on save Button for job Title with multiple words")
+	public static void clickSaveButtonMultiple() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickSaveJobTitle();
+	}
+	
+	@Then("It should display record found Message with multiple words")
+	public static void checkJobTitleRecordFoundMultiple() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		boolean result=jp.checkRecordFound();
+		Assert.assertTrue(result);
+	}
+	
+	@When("User logged into system for job Title with number")
+	public static void enterLoginforJobTitleNumber() {
+		LoginPage lp=new LoginPage();
+		lp.enterUsername("admin");
+		lp.enterPassword("admin123");
+		lp.clickOnLogin();
+	}
+	
+	@And("click on Admin for Job pages.")
+	public static void clickAdminJobTitleNumber() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnAdmin();
+	}
+	
+	@And("click on Job dropdown for job Title with number")
+	public static void clickOnJobDropDownListNumber() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnJob();
+	}
+	
+	@And("select job title with number")
+	public static void selectJobTitlenumber() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnJobTitle();
+	}
+	
+	@And("click on +Add Button for job Title with number")
+	public static void clickAddButtonNumber() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnAdd();
+	}
+	
+	@And("enter title with number")
+	public static void enterTitleAsNumbers() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.enterTitle("Data Analyst Level 2");
+	}
+	
+	@And("enter Job descriptions for job Title with number")
+	public static void enterJobdescriptionNumber() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.enterJobDescription("- Design, plan, execute and automate tests for software and manage test activities for applications under development.\r\n"
+				+ "- Utilize available test framework and tools and provide long-term strategy for automated testing of applications.\r\n"
+				+ "- Fluent in one or more of Test automation tools like Selenium and BDD frameworks like Cucumber.");
+	}
+	
+	@And("click on save Button for job Title with number")
+	public static void clickSaveButtonNumbers() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickSaveJobTitle();
+	}
+	
+	@Then("It should display record found Message with number")
+	public static void checkJobTitleRecordFoundNumbers() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		boolean result=jp.checkRecordFound();
+		Assert.assertTrue(result);
+	}
+	
+	@When("User logged into system for job Title with mixed case")
+	public static void enterLoginforJobTitleMixedCase() {
+		LoginPage lp=new LoginPage();
+		lp.enterUsername("admin");
+		lp.enterPassword("admin123");
+		lp.clickOnLogin();
+	}
+	
+	@And("click On admin for Job page")
+	public static void clickAdminJobTitleMixedCase() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnAdmin();
+	}
+	
+	@And("click on Job dropdown for job Title with mixed case")
+	public static void clickOnJobDropDownListMixedCase() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnJob();
+	}
+	
+	@And("select job title with mixed case")
+	public static void selectJobTitleMixedCase() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnJobTitle();
+	}
+	
+	@And("click on +Add Button for job Title with mixed case")
+	public static void clickAddButtonMixedCase() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnAdd();
+	}
+	
+	@And("enter title with mixed case")
+	public static void enterTitleAsMixedCase() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.enterTitle("QA Tester");
+	}
+	
+	@And("enter Job descriptions for job Title with mixed case")
+	public static void enterJobdescriptionMixedCase() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.enterJobDescription("- Design, plan, execute and automate tests for software and manage test activities for applications under development.\r\n"
+				+ "- Utilize available test framework and tools and provide long-term strategy for automated testing of applications.\r\n"
+				+ "- Fluent in one or more of Test automation tools like Selenium and BDD frameworks like Cucumber.");
+	}
+	
+	@And("click on save Button for job Title with mixed case")
+	public static void clickSaveButtonMixedCase() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickSaveJobTitle();
+	}
+	
+	@Then("It should display record found Message with mixed case")
+	public static void checkJobTitleRecordFoundMixedCase() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		boolean result=jp.checkRecordFound();
+		Assert.assertTrue(result);
+	}
+	
+	@When("User logged into system for job Title with Apostrophes")
+	public static void enterLoginforJobTitleApostrophes() {
+		LoginPage lp=new LoginPage();
+		lp.enterUsername("admin");
+		lp.enterPassword("admin123");
+		lp.clickOnLogin();
+	}
+	
+	@And("click on admin for Job pages")
+	public static void clickAdminJobTitleApostrophes() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnAdmin();
+	}
+	
+	@And("click on Job dropdown for job Title with Apostrophes")
+	public static void clickOnJobDropDownListApostrophes() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnJob();
+	}
+	
+	@And("select job title with Apostrophes")
+	public static void selectJobTitleApostrophes() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnJobTitle();
+	}
+	
+	@And("click on +Add Button for job Title with Apostrophes")
+	public static void clickAddButtonApostrophes() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnAdd();
+	}
+	
+	@And("enter title with Apostrophes")
+	public static void enterTitleAsApostrophes() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.enterTitle("CEO's Executive Assistant");
+	}
+	
+	@And("enter Job descriptions for job Title with Apostrophes")
+	public static void enterJobdescriptionApostrophes() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.enterJobDescription("- Design, plan, execute and automate tests for software and manage test activities for applications under development.\r\n"
+				+ "- Utilize available test framework and tools and provide long-term strategy for automated testing of applications.\r\n"
+				+ "- Fluent in one or more of Test automation tools like Selenium and BDD frameworks like Cucumber.");
+	}
+	
+	@And("click on save Button for job Title with Apostrophes")
+	public static void clickSaveButtonApostrophes() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickSaveJobTitle();
+	}
+	
+	@Then("It should display record found Message Apostrophes")
+	public static void checkJobTitleRecordFoundApostrophes() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		boolean result=jp.checkRecordFound();
+		Assert.assertTrue(result);
+	}
+	
+	@When("User logged into system for job Title with maximum character")
+	public static void enterJobTitleMaxChar() {
+		LoginPage lp=new LoginPage();
+		lp.enterUsername("admin");
+		lp.enterPassword("admin123");
+		lp.clickOnLogin();
+	}
+	
+	@And("click on admin for Job pages for maximum character")
+	public static void clickOnAdminTabMaxChar() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnAdmin();
+	}
+	
+	@And("click on Job dropdown for job Title with maximum character")
+	public static void clickOnJobDropdownMaxChar() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnJob();
+	}
+	
+	@And("select job title with maximum character")
+	public static void selectJobTitleMaxChar() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnJobTitle();
+	}
+	
+	@And("click on +Add Button for job Title with maximum character")
+	public static void clickAddButtonMaxChar() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnAdd();
+	}
+	
+	@And("enter title with maximum character")
+	public static void enterTitleMaxChar() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.enterTitle("Senior Software Engineer - Full Stack Development with Focus on AI & Machine Learning Solutions 3-5 year experience");
+	}
+	
+	@And("enter Job descriptions for job Title with maximum character")
+	public static void enterJobDescriptionsMaxChar() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.enterJobDescription("- Design, plan, execute and automate tests for software and manage test activities for applications under development.\r\n"
+				+ "- Utilize available test framework and tools and provide long-term strategy for automated testing of applications.\r\n"
+				+ "- Fluent in one or more of Test automation tools like Selenium and BDD frameworks like Cucumber.");
+	}
+	
+	@And("click on save Button for job Title with maximum character")
+	public static void clickOnSaveButtonMaxChar() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickSaveJobTitle();
+	}
+	
+	@Then("It should display record found Message maximum character")
+	public static void checkJobTitleErrorMsgMaxChar() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		String actual_msg=jp.checkMaxLength();
+		Assert.assertEquals(actual_msg, readPropertyFile.getErrorMsgJobTitleMaxLength());
+		
+	}
+	
+	
+	
 }

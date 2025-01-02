@@ -37,8 +37,11 @@ public class AddJobTitlePage {
 		@FindBy(css = "div.oxd-form-row+div>div>div+div>textarea.oxd-textarea")
 		private static WebElement jobDescription;
 		
-		@FindBy(css = "div.orangehrm-background-container>div>div+div>div>span")
+		@FindBy(css = "div.orangehrm-horizontal-padding>span")
 		private static WebElement recordFound;
+		
+		@FindBy(css = "span.oxd-input-group__message")
+		private static WebElement errorMsgMaxLength ;
 		
 		public void clickOnAdmin() {
 			WaitFor.visibilityOfElement(admin);
@@ -85,5 +88,10 @@ public class AddJobTitlePage {
 		public boolean checkRecordFound() {
 			WaitFor.visibilityOfElement(recordFound);
 			return Keywords.elementIsDisplayed(recordFound);
+		}
+		
+		public String checkMaxLength() {
+			WaitFor.visibilityOfElement(errorMsgMaxLength);
+			return Keywords.getMessage(errorMsgMaxLength);
 		}
 }
