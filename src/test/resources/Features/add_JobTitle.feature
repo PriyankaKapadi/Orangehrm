@@ -49,7 +49,6 @@ Scenario: To verify when user enter job title as special character only
 	And click on save Button for special character
 	Then It should display an Error messsage as 'Please enter valid Job title'
 	
-@today
 Scenario: To verify when user enter job title as string only
 	
 	When User logged into system for job Title as string

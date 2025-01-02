@@ -63,17 +63,17 @@ public abstract class Keywords {
 	public static boolean elementIsDisplayed(WebElement element) {
 		return element.isDisplayed();
 	}
-	
+
 	public static String getUrlPage() {
 		return driver.getCurrentUrl();
 	}
-	
+
 	public static String getTextFrom(WebElement element) {
 		return element.getText();
 	}
-	
+
 	public static void moveToAnyElement(WebElement element) {
-		Actions action=new Actions(driver);
+		Actions action = new Actions(driver);
 		action.moveToElement(element).click().perform();
 	}
 }

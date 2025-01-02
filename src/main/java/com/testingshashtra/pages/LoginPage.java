@@ -33,11 +33,10 @@ public class LoginPage {
 
 	@FindBy(css = "button.orangehrm-forgot-password-button--reset")
 	private static WebElement resetPasswordButton;
-	
-	
+
 	@FindBy(css = "div.orangehrm-login-form>form>div+div>div>span")
 	private static WebElement passwordErrorMessage;
-	
+
 	public void enterUsername(String usernm) {
 		WaitFor.visibilityOfElement(username);
 		Keywords.enterTextTo(username, usernm);
@@ -70,9 +69,9 @@ public class LoginPage {
 
 	public void clickOnForgotPasswordLink() {
 		WaitFor.visibilityOfElement(forgotPassword);
-		Keywords.elementIsClickable(forgotPassword);
+		Keywords.clickOnWebElement(forgotPassword);
 	}
-	
+
 	public String getErrorMessageForPassword() {
 		WaitFor.visibilityOfElement(passwordErrorMessage);
 		return Keywords.getMessage(passwordErrorMessage);
