@@ -306,4 +306,5 @@ public class UserLoginSteps {
 		Assert.assertEquals(err_msg, readPropertyFile.getErrorMessageForAlphanumericNewPassword(),
 				"Application should display an error Message as 'Password must contain at least one uppercase letter, one lowercase letter, one special character and one number'");
 	}
+
 }
