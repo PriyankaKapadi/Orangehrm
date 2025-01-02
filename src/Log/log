@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+2024-Dec-26 22:28:38,418 [main] com.testingshashtra.stepdefinition.Hooks 
+=======
 2025-Jan-02 15:09:18,442 [main] com.testingshashtra.stepdefinition.Hooks 
   INFO  Browser is launched
 2025-Jan-02 15:09:42,904 [main] com.testingshashtra.stepdefinition.Hooks 
+>>>>>>> cbdd5163d116ec57f9e4841b0f9363530ec6a401
   INFO  Browser is launched
