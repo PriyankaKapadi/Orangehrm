@@ -56,4 +56,8 @@ public class readPropertyFile {
 		return PropUtils.loadFile(fpathError, "ErrorMsgJobTitle");
 	}
 	
+	public static String getErrorMessageFirstName() {
+		return PropUtils.loadFile(fpathError, "ErrorMsgFirstName");
+	}
+	
 }

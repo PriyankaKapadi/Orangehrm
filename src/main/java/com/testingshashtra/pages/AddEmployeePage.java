@@ -27,6 +27,9 @@ public class AddEmployeePage {
 	@FindBy(css = "input.orangehrm-lastname")
 	private static WebElement lastName;
 	
+	@FindBy(css = "input.orangehrm-middlename")
+	private static WebElement middleName;
+	
 	@FindBy(css = "form.oxd-form>div.oxd-form-actions>p+button+button")
 	private static WebElement saveButton;
 	
@@ -35,6 +38,12 @@ public class AddEmployeePage {
 	
 	@FindBy(css = "div.orangehrm-edit-employee-content>div>h6")
 	private static WebElement personalDetails;
+	
+	@FindBy(css = "div.oxd-grid-2>div>div>div+div>input")
+	private static WebElement employeeId;
+	
+	@FindBy(css = "span.oxd-input-field-error-message")
+	private static WebElement errorMessage;
 		
 	public void clickOnPimMenu() {
 		WaitFor.visibilityOfElement(pimMenu);
@@ -49,6 +58,16 @@ public class AddEmployeePage {
 	public void enterFirstName(String fname) {
 		WaitFor.visibilityOfElement(firstName);
 		Keywords.enterTextTo(firstName, fname);
+	}
+	
+	public void enterMiddleName(String mname) {
+		WaitFor.visibilityOfElement(middleName);
+		Keywords.enterTextTo(middleName, mname);
+	}
+	
+	public void enterEmpId(String empId) {
+		WaitFor.visibilityOfElement(employeeId);
+		Keywords.enterTextTo(employeeId, empId);
 	}
 	
 	public void enterLastName(String lname) {
@@ -67,5 +86,10 @@ public class AddEmployeePage {
 	public boolean availablePersonalDetails() {
 		WaitFor.visibilityOfElement(personalDetails);
 		return Keywords.elementIsDisplayed(personalDetails);
+	}
+	
+	public String getErrorMessage() {
+		WaitFor.visibilityOfElement(errorMessage);
+		return Keywords.getMessage(errorMessage);
 	}
 }
