@@ -1,8 +1,6 @@
 package com.testingshashtra.pages;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -44,7 +42,16 @@ public class AddEmployeePage {
 	
 	@FindBy(css = "span.oxd-input-field-error-message")
 	private static WebElement errorMessage;
-		
+	
+	@FindBy(css = "i.bi-plus")
+	private static WebElement plusButton;
+	
+	@FindBy(css = "input.oxd-file-input")
+	private static WebElement fileImage;
+	
+	@FindBy(css = "span.oxd-input-field-error-message")
+	private static WebElement errorMessageForImage;
+	
 	public void clickOnPimMenu() {
 		WaitFor.visibilityOfElement(pimMenu);
 		Keywords.clickOnWebElement(pimMenu);
@@ -91,5 +98,19 @@ public class AddEmployeePage {
 	public String getErrorMessage() {
 		WaitFor.visibilityOfElement(errorMessage);
 		return Keywords.getMessage(errorMessage);
+	}
+	
+	public void clickOnImageIcon(String path) {
+		boolean flag=WaitFor.invisibilityOfElement(formLoader);
+		if(flag==true) {
+			WaitFor.elementToBeClickable(plusButton);
+			Keywords.moveToAnyElement(plusButton);
+			Keywords.enterTextTo(fileImage,path);
+		}
+	}
+	
+	public String getErrorMessageForPsdImage() {
+		WaitFor.visibilityOfElement(errorMessageForImage);
+		return Keywords.getMessage(errorMessageForImage);
 	}
 }

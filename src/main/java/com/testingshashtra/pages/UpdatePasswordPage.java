@@ -3,9 +3,7 @@ package com.testingshashtra.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.testingshashtra.base.Keywords;
-import com.testingshashtra.utils.readPropertyFile;
 import com.testingshashtra.wait.WaitFor;
 
 public class UpdatePasswordPage {

@@ -71,4 +71,16 @@ public class readPropertyFile {
 	public static String getErrorMessageNameFieldMaxChar() {
 		return PropUtils.loadFile(fpathError, "ErrorMessageNameFieldMaxChar");
 	}
+	
+	public static String getErrorMessageForImage() {
+		return PropUtils.loadFile(fpathError, "ErrorMsgForPsdImage");
+	}
+	
+	public static String getErrorMessageForBigImage() {
+		return PropUtils.loadFile(fpathError, "ErrorMsgForBigImage");
+	}
+	
+	public static String getErrorMessageForFile() {
+		return PropUtils.loadFile(fpathError, "ErrorMsgForFile");
+	}
 }

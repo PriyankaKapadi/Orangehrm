@@ -347,4 +347,176 @@ public class AddEmployeeSteps {
 		String actual_result=add_emp.getErrorMessage();
 		Assert.assertEquals(actual_result,readPropertyFile.getErrorMessageFirstName(),"It does not display error msg as'Please enter valid First Name'");
 	}
+	
+	@When("User logged into system for valid image")
+	public static void userLoginAddEmpForValidImage() {
+		LoginPage lp=new LoginPage();
+		lp.enterUsername("admin");
+		lp.enterPassword("admin123");
+		lp.clickOnLogin();
+	}
+	
+	@And("click on PIM menu for valid image")
+	public static void clickPIMForValidImage() {
+		AddEmployeePage add_emp=new AddEmployeePage();
+		add_emp.clickOnPimMenu();
+	}
+	
+	@And("click on add employee button for valid image")
+	public static void clickAddEmpForValidImage() {
+		AddEmployeePage add_emp=new AddEmployeePage();
+		add_emp.clickAddEmployeeButton();
+	}
+	
+	@And("user enters first,Middle,Last name")
+	public static void enterFirstNameForValidImage() {
+		AddEmployeePage add_emp=new AddEmployeePage();
+		add_emp.enterFirstName("Sam");
+		add_emp.enterMiddleName("P");
+		add_emp.enterLastName("Sharma");
+		add_emp.enterEmpId("00");
+	}
+	
+	@And("click image icon for valid image image and click on save")
+	public static void enterDetailsAndSaveForValidImage() {
+		AddEmployeePage add_emp=new AddEmployeePage();
+		add_emp.clickOnImageIcon("C:\\Users\\hp\\Downloads\\portrait_of_a_baby_boy.gif");
+		add_emp.clickOnSaveButton();
+	}
+	
+	@Then("It should successfully save details of employee for valid image")
+	public static void checkForSuccessMsgImage() {
+		AddEmployeePage add_emp=new AddEmployeePage();
+		boolean result=add_emp.availablePersonalDetails();
+		Assert.assertTrue(result);
+	}
+	
+	@When("User logged into system for PSD image")
+	public static void userLoginAddEmpForPSDImage() {
+		LoginPage lp=new LoginPage();
+		lp.enterUsername("admin");
+		lp.enterPassword("admin123");
+		lp.clickOnLogin();
+	}
+	
+	@And("click on PIM menu for PSD image")
+	public static void clickPIMForPSDImage() {
+		AddEmployeePage add_emp=new AddEmployeePage();
+		add_emp.clickOnPimMenu();
+	}
+	
+	@And("click on add employee button for PSD image")
+	public static void clickAddEmpForPSDImage() {
+		AddEmployeePage add_emp=new AddEmployeePage();
+		add_emp.clickAddEmployeeButton();
+	}
+	
+	@And("user enters first,Middle,Last name for PSD")
+	public static void enterFirstNameForPSDImage() {
+		AddEmployeePage add_emp=new AddEmployeePage();
+		add_emp.enterFirstName("Harry");
+		add_emp.enterMiddleName("P");
+		add_emp.enterLastName("Singh");
+		add_emp.enterEmpId("00");
+	}
+	
+	@And("click image icon for PSD image image and click on save")
+	public static void enterDetailsAndSaveForPSDImage() {
+		AddEmployeePage add_emp=new AddEmployeePage();
+		add_emp.clickOnImageIcon("C:\\Users\\hp\\Downloads\\download.psd");
+		add_emp.clickOnSaveButton();
+	}
+	
+	@Then("It should successfully save details of employee for PSD image")
+	public static void checkErrorMsgForPsdImage() {
+		AddEmployeePage add_emp=new AddEmployeePage();
+		String actual_result=add_emp.getErrorMessageForPsdImage();
+		Assert.assertEquals(actual_result,readPropertyFile.getErrorMessageForImage());
+	}
+	
+	@When("User logged into system for Big image")
+	public static void userLoginAddEmpForBigImage() {
+		LoginPage lp=new LoginPage();
+		lp.enterUsername("admin");
+		lp.enterPassword("admin123");
+		lp.clickOnLogin();
+	}
+	
+	@And("click on PIM menu for Big image")
+	public static void clickPIMForBigImage() {
+		AddEmployeePage add_emp=new AddEmployeePage();
+		add_emp.clickOnPimMenu();
+	}
+	
+	@And("click on add employee button for Big image")
+	public static void clickAddEmpForBigImage() {
+		AddEmployeePage add_emp=new AddEmployeePage();
+		add_emp.clickAddEmployeeButton();
+	}
+	
+	@And("user enters first,Middle,Last name for Big")
+	public static void enterFirstNameForBigImage() {
+		AddEmployeePage add_emp=new AddEmployeePage();
+		add_emp.enterFirstName("Harry");
+		add_emp.enterMiddleName("P");
+		add_emp.enterLastName("Singh");
+		add_emp.enterEmpId("00");
+	}
+	
+	@And("click image icon for Big image image and click on save")
+	public static void enterDetailsAndSaveForBigImage() {
+		AddEmployeePage add_emp=new AddEmployeePage();
+		add_emp.clickOnImageIcon("F:\\Besties\\20230412_221802.jpg");
+		add_emp.clickOnSaveButton();
+	}
+	
+	@Then("It should successfully save details of employee for Big image")
+	public static void checkErrorMsgForBigImage() {
+		AddEmployeePage add_emp=new AddEmployeePage();
+		String actual_result=add_emp.getErrorMessageForPsdImage();
+		Assert.assertEquals(actual_result,readPropertyFile.getErrorMessageForBigImage());
+	}
+	
+	@When("User logged into system for file")
+	public static void userLoginAddEmpForfile() {
+		LoginPage lp=new LoginPage();
+		lp.enterUsername("admin");
+		lp.enterPassword("admin123");
+		lp.clickOnLogin();
+	}
+	
+	@And("click on PIM menu for file")
+	public static void clickPIMForfile() {
+		AddEmployeePage add_emp=new AddEmployeePage();
+		add_emp.clickOnPimMenu();
+	}
+	
+	@And("click on add employee button for file")
+	public static void clickAddEmpForfile() {
+		AddEmployeePage add_emp=new AddEmployeePage();
+		add_emp.clickAddEmployeeButton();
+	}
+	
+	@And("user enters first,Middle,Last name for file")
+	public static void enterFirstNameForfile() {
+		AddEmployeePage add_emp=new AddEmployeePage();
+		add_emp.enterFirstName("Harry");
+		add_emp.enterMiddleName("P");
+		add_emp.enterLastName("Singh");
+		add_emp.enterEmpId("00");
+	}
+	
+	@And("click image icon for file and click on save")
+	public static void enterDetailsAndSaveForfile() {
+		AddEmployeePage add_emp=new AddEmployeePage();
+		add_emp.clickOnImageIcon("C:\\Users\\hp\\Downloads\\orangehrm-login.feature");
+		add_emp.clickOnSaveButton();
+	}
+	
+	@Then("It should successfully save details of employee for file")
+	public static void checkErrorMsgForfile() {
+		AddEmployeePage add_emp=new AddEmployeePage();
+		String actual_result=add_emp.getErrorMessageForPsdImage();
+		Assert.assertEquals(actual_result,readPropertyFile.getErrorMessageForFile());
+	}
 }
