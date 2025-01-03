@@ -1,10 +1,8 @@
 package com.testingshashtra.stepdefinition;
 
 import org.apache.log4j.Logger;
-
 import com.testingshashtra.base.Keywords;
 import com.testingshashtra.utils.readPropertyFile;
-
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
@@ -20,7 +18,8 @@ public class Hooks {
 		LOG.info("Browser is launched");
 	}
 
-	/*
-	 * @After public static void teardown() { Keywords.driver.quit(); }
-	 */
+	 @After public static void teardown() { 
+		 Keywords.driver.quit(); 
+	}
+	 
 }

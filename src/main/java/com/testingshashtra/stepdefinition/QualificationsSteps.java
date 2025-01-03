@@ -5,7 +5,6 @@ import org.testng.Assert;
 import com.testingshashtra.pages.AddSkillPage;
 import com.testingshashtra.pages.HomePage;
 import com.testingshashtra.pages.LoginPage;
-import com.testingshashtra.pages.ResetPasswordPage;
 import com.testingshashtra.pages.SkillsPage;
 import com.testingshashtra.utils.readPropertyFile;
 
