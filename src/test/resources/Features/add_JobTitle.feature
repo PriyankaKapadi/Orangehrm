@@ -9,7 +9,7 @@ Scenario: To verify when user enter job title as blank only
 	And click on +ADD button 
 	And enter title as blank
 	And enter job description
-	And click on Save button
+	And click on Save button invalid Job Title
 	Then It should display error messsage as 'Please enter valid Job Title'
 
 Scenario: To verify when user enter job title as space only
@@ -155,3 +155,29 @@ Scenario: To verify when user enter job title with  maximum character more than 
 	And enter Job descriptions for job Title with maximum character
 	And click on save Button for job Title with maximum character
 	Then It should display record found Message maximum character
+
+Scenario: To Verify the file size validation  should not exceed maxmimum size 1MB.
+	
+	When User logged into system for job Title attach File
+	And click on admin for Job pages for File  
+	And click on Job dropdown for job Title for File
+	And select job title with File
+	And click on +Add Button for job Title with File
+	And enter title with File
+	And enter Job descriptions with valid job title for File 
+	And select the file for attachment
+	And click on save Button for File attachment
+	Then It should display record found Message with File
+
+Scenario: To Verify when user attach job specification file as image(jpg)
+	
+	When User logged into system for job Title attach file
+	And click on admin for Job pages for file  
+	And click on Job dropdown for job Title for file
+	And select job title with file
+	And click on +Add Button for job Title with file
+	And enter title with file
+	And enter Job descriptions with valid job title for file 
+	And select the File for attachment
+	And click on save Button for file attachment
+	Then It should display error message as 'File type not allowed'

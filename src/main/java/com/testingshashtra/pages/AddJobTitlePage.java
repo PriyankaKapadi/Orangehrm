@@ -43,6 +43,12 @@ public class AddJobTitlePage {
 		@FindBy(css = "span.oxd-input-group__message")
 		private static WebElement errorMsgMaxLength ;
 		
+		@FindBy(css = "div.oxd-file-button")
+		private static WebElement browse;
+		
+		@FindBy(css = "input.oxd-file-input")
+		private static WebElement filePathBrowseButton;
+		
 		public void clickOnAdmin() {
 			WaitFor.visibilityOfElement(admin);
 			Keywords.clickOnWebElement(admin);
@@ -93,5 +99,17 @@ public class AddJobTitlePage {
 		public String checkMaxLength() {
 			WaitFor.visibilityOfElement(errorMsgMaxLength);
 			return Keywords.getMessage(errorMsgMaxLength);
+		}
+		
+		public void clickBrowseImage() {
+			WaitFor.visibilityOfElement(browse);
+			Keywords.clickOnWebElement(browse);
+			Keywords.enterTextTo(filePathBrowseButton, "D:\\YogitaTesting\\Javalink.txt");
+		}
+		
+		public void clickBrowseImg() {
+			WaitFor.visibilityOfElement(browse);
+			Keywords.clickOnWebElement(browse);
+			Keywords.enterTextTo(filePathBrowseButton, "C:\\Users\\DELL\\Desktop\\WhatsApp Image 2025-01-03 at 09.41.45_e9e54b26.jpg");
 		}
 }

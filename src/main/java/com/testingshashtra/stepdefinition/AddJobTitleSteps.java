@@ -58,8 +58,8 @@ public class AddJobTitleSteps {
 				+ "- Fluent in one or more of Test automation tools like Selenium and BDD frameworks like Cucumber.");
 	}
 	
-	@And("click on Save button")
-	public static void clickOnSave() {
+	@And("click on Save button invalid Job Title")
+	public static void clickOnSaveInvalidJT() {
 		AddJobTitlePage jp = new AddJobTitlePage();
 		jp.clickSaveJobTitle();
 	}
@@ -783,6 +783,134 @@ public class AddJobTitleSteps {
 		
 	}
 	
+	@When("User logged into system for job Title attach File")
+	public static void enterLoginforJobTitleFile() {
+		LoginPage lp=new LoginPage();
+		lp.enterUsername("admin");
+		lp.enterPassword("admin123");
+		lp.clickOnLogin();
+	}
 	
+	@And("click on admin for Job pages for File")
+	public static void clickAdminJobTitleFile() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnAdmin();
+	}
+	
+	@And("click on Job dropdown for job Title for File")
+	public static void clickOnJobDropDownListFile() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnJob();
+	}
+	
+	@And("select job title with File")
+	public static void selectJobTitleFile() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnJobTitle();
+	}
+	
+	@And("click on +Add Button for job Title with File")
+	public static void clickAddButtonFile() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnAdd();
+	}
+	
+	@And("enter title with File")
+	public static void enterTitleAndAttachFile() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.enterTitle("Executive Assistant");
+	}
+	
+	@And("enter Job descriptions with valid job title for File")
+	public static void enterJobdescriptionAttachFile() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.enterJobDescription("- Design, plan, execute and automate tests for software and manage test activities for applications under development.\r\n"
+				+ "- Utilize available test framework and tools and provide long-term strategy for automated testing of applications.\r\n"
+				+ "- Fluent in one or more of Test automation tools like Selenium and BDD frameworks like Cucumber.");
+	}
+	
+	@And("select the file for attachment")
+	public static void selectFile() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickBrowseImage();
+	}
+	
+	@And("click on save Button for File attachment")
+	public static void clickSaveButtonFileAttachement() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickSaveJobTitle();
+	}
+	
+	@Then("It should display record found Message with File")
+	public static void checkJobTitleRecordFoundFile() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		boolean result=jp.checkRecordFound();
+		Assert.assertTrue(result);
+	}
+	
+	@When("User logged into system for job Title attach file")
+	public static void enterLoginforJobTitleImg() {
+		LoginPage lp=new LoginPage();
+		lp.enterUsername("admin");
+		lp.enterPassword("admin123");
+		lp.clickOnLogin();
+	}
+	
+	@And("click on admin for Job pages for file")
+	public static void clickAdminJobTitleImg() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnAdmin();
+	}
+	
+	@And("click on Job dropdown for job Title for file")
+	public static void clickOnJobDropDownListImg() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnJob();
+	}
+	
+	@And("select job title with file")
+	public static void selectJobTitleImg() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnJobTitle();
+	}
+	
+	@And("click on +Add Button for job Title with file")
+	public static void clickAddButtonImg() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickOnAdd();
+	}
+	
+	@And("enter title with file")
+	public static void enterTitleAndAttachImg() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.enterTitle("Sr.Executive Assistant");
+	}
+	
+	@And("enter Job descriptions with valid job title for file")
+	public static void enterJobdescriptionAttachImg() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.enterJobDescription("- Design, plan, execute and automate tests for software and manage test activities for applications under development.\r\n"
+				+ "- Utilize available test framework and tools and provide long-term strategy for automated testing of applications.\r\n"
+				+ "- Fluent in one or more of Test automation tools like Selenium and BDD frameworks like Cucumber.");
+	}
+	
+	@And("select the File for attachment")
+	public static void selectImg() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickBrowseImg();
+	}
+	
+	@And("click on save Button for file attachment")
+	public static void clickSaveButtonImgFileAttachement() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		jp.clickSaveJobTitle();
+	}
+	
+	@Then("It should display error message as 'File type not allowed'")
+	public static void checkJobSpecErrMsg() {
+		AddJobTitlePage jp = new AddJobTitlePage();
+		boolean result=jp.checkRecordFound();
+		Assert.assertFalse(result);
+		}
 	
 }
